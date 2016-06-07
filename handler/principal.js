@@ -8,10 +8,11 @@
  **
  -----------------------------------------------------------------------------*/
 
-var xml = require("libxmljs");
 var rh = require("../libs/responsehelper");
 var xh = require("../libs/xmlhelper");
 var log = require('../libs/log').log;
+
+var cal = require("./calendar");
 
 // Exporting.
 module.exports = {
@@ -32,8 +33,7 @@ function propfind(request)
     res.writeHead(207);
     res.write(xh.getXMLHead());
 
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/A:propfind/A:prop', {
         A: 'DAV:',
@@ -45,7 +45,7 @@ function propfind(request)
     var childs = node.childNodes();
 
     var response = "";
-
+    
     var len = childs.length;
     for (var i=0; i < len; ++i)
     {
@@ -62,7 +62,7 @@ function propfind(request)
                 break;
 
             case 'supported-report-set':
-                response += getSupportedReportSet(request);
+                response += getSupportedReportSet();
                 break;
 
             case 'principal-URL':
@@ -115,6 +115,17 @@ function propfind(request)
                 response += "";
                 break;
 
+            // FIXME @mdarveau It this usefull?
+            case 'resourcetype':
+                response += "<d:resourcetype><d:collection/><cal:calendar/></d:resourcetype>";
+                break;
+              
+            // FIXME @mdarveau It this usefull?
+            case 'owner':
+                var username = request.getUser().getUserName();
+                response += "<d:owner><d:href>/p/" + username +"/</d:href></d:owner>";
+                break;
+            
             default:
                 if(name != 'text') log.warn("P-PF: not handled: " + name);
                 break;
@@ -145,7 +156,7 @@ function getCalendarUserAddressSet(request)
     return response;
 }
 
-function getSupportedReportSet(request)
+function getSupportedReportSet()
 {
     var response = "";
     response += "        <d:supported-report-set>\r\n";
@@ -176,7 +187,7 @@ function options(request)
     var res = request.getRes();
     res.setHeader("Content-Type", "text/html");
     res.setHeader("Server", "Fennel");
-
+    
     rh.setDAVHeaders(request);
     rh.setAllowHeader(request);
 
@@ -193,8 +204,7 @@ function report(request)
     res.writeHead(200);
     res.write(xh.getXMLHead());
 
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/A:propfind/A:prop', {
         A: 'DAV:',
@@ -218,7 +228,7 @@ function report(request)
             switch(name)
             {
                 case 'principal-search-property-set':
-                    response += getPrincipalSearchPropertySet(request);
+                    response += getPrincipalSearchPropertySet();
                     break;
 
                 default:
@@ -242,7 +252,7 @@ function report(request)
         switch(name)
         {
             case 'principal-search-property-set':
-                response += getPrincipalSearchPropertySet(request);
+                response += getPrincipalSearchPropertySet();
                 break;
 
             default:
@@ -261,7 +271,7 @@ function report(request)
 }
 
 
-function getPrincipalSearchPropertySet(request)
+function getPrincipalSearchPropertySet()
 {
     var response = "";
     response += "<d:principal-search-property-set xmlns:d=\"DAV:\" xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:card=\"urn:ietf:params:xml:ns:carddav\">\r\n";
@@ -285,8 +295,7 @@ function getPrincipalSearchPropertySet(request)
 
 function isReportPropertyCalendarProxyWriteFor(request)
 {
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/A:expand-property/A:property[@name=\'calendar-proxy-write-for\']', { A: 'DAV:', C: 'http://calendarserver.org/ns/'});
 

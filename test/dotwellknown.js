@@ -51,7 +51,7 @@ test('Redirect to /p/ when hitting .well-known URL', function (t) {
             'sendImmediately': true
         } ,
         followRedirect: false
-    }
+    };
 
     request(options, function (error, response, body) {
 

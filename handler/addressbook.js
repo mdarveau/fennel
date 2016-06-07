@@ -8,7 +8,6 @@
  **
  -----------------------------------------------------------------------------*/
 
-var xml = require("libxmljs");
 var rh = require("../libs/responsehelper");
 var xh = require("../libs/xmlhelper");
 var log = require('../libs/log').log;
@@ -40,8 +39,7 @@ function propfind(request)
 
     var response = "";
 
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/A:propfind/A:prop', {
         A: 'DAV:',
@@ -53,6 +51,7 @@ function propfind(request)
 
     var isRoot = true;
 
+    // FIXME @mdarveau This will not work with root path other than /
     // if URL element size === 4, this is a call for the root URL of a user.
     // TODO:
     if(request.getUrlElementSize() > 4)
@@ -640,8 +639,7 @@ function report(request)
     res.writeHead(200);
     res.write(xh.getXMLHead());
 
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var rootNode = xmlDoc.root();
 
@@ -660,8 +658,7 @@ function report(request)
 
 function handleReportAdressbookMultiget(request)
 {
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/B:addressbook-multiget', {
         A: 'DAV:',
@@ -761,8 +758,7 @@ function proppatch(request)
 
     res.write(xh.getXMLHead());
 
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/A:propertyupdate/A:set/A:prop', {
         A: 'DAV:',

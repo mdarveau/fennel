@@ -51,7 +51,7 @@ test('Redirect to /p/ when hitting /', function (t) {
             'sendImmediately': true
         } ,
         followRedirect: false
-    }
+    };
 
     request(options, function (error, response, body) {
 

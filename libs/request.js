@@ -11,17 +11,17 @@
 var log = require('../libs/log').log;
 var userLib = require('../libs/user');
 var url = require('url');
+var xml = require("libxmljs");
 
 // Exporting.
 module.exports = {
     request: request
 };
 
-function request(req, res, body)
+function request(req, res)
 {
     this.req = req;
     this.res = res;
-    this.body = body;
 
     var header = req.headers['authorization']||'';        // get the header
     var token = header.split(/\s+/).pop()||'';            // and the encoded auth token
@@ -79,7 +79,16 @@ request.prototype.getRes = function()
 
 request.prototype.getBody = function()
 {
-    return this.body;
+    return this.req.body;
+};
+
+request.prototype.getXml = function()
+{
+    // Make sure we parse the XML only once
+    if(this.xmlBody == null) {
+        this.xmlBody = xml.parseXml( this.req.body );
+    }
+    return this.xmlBody;
 };
 
 request.prototype.getURL = function()
@@ -87,6 +96,7 @@ request.prototype.getURL = function()
     return this.req.url;
 };
 
+// FIXME @mdarveau Check if used
 request.prototype.getURLAsArray = function()
 {
     var aUrl = url.parse(this.req.url).pathname.split("/");
@@ -99,6 +109,7 @@ request.prototype.getURLAsArray = function()
     return aUrl;
 };
 
+// FIXME @mdarveau This will not work with root path other than /
 request.prototype.getFilenameFromPath = function(removeEnding)
 {
     var aUrl = url.parse(this.req.url).pathname.split("/");

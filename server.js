@@ -30,14 +30,18 @@
 -----------------------------------------------------------------------------*/
 var config = require('./config').config;
 var authlib = require('./libs/authentication');
-var http = require('http');
-var url = require('url');
 var log = require('./libs/log').log;
-var handler = require('./libs/requesthandler');
-
 var reqlib = require('./libs/request');
-var httpauth = require('http-auth');
 
+var path = require('path');
+var url = require('url');
+var httpauth = require('http-auth');
+var express = require('express');
+var app = express();
+
+//
+// Configure auth
+//
 var basic = httpauth.basic(
     {
         realm: "Fennel"
@@ -46,85 +50,102 @@ var basic = httpauth.basic(
         authlib.checkLogin(username, password, callback);
     }
 );
+app.use(httpauth.connect(basic));
+
+//
+// Get the request body
+//
+var bodyParser = require('body-parser');
+app.use(bodyParser.text({
+    type: '*/*'
+}));
+
+//
+// Configure logging
+//
+if ( process.env.LOG_HTTP !== 'false' ) {
+    var winston = require( 'winston' );
+    var expressWinston = require( 'express-winston' );
+    
+    // LOG_HTTP_BODY==true enabled full HTTP logging
+    if (process.env.LOG_HTTP_BODY === 'true') {
+        log.info("HTTP body logging is enabled. Set LOG_HTTP_BODY=false to turn off.");
+        expressWinston.requestWhitelist.push( 'body' );
+        expressWinston.responseWhitelist.push( 'body' );
+    } else {
+        log.info("HTTP body logging is disabled. Set LOG_HTTP_BODY=true to turn on.");
+    }
+    
+    log.info("HTTP body logging is enabled. Set LOG_HTTP=false to turn off.");
+    var logger = expressWinston.logger( {
+        transports: [new winston.transports.Console( {
+            json: false,
+            stringify: !(process.env.LOG_HTTP_PRETTY === 'true' || (process.env.NODE_ENV !== 'production' && process.env.LOG_HTTP_PRETTY !== 'false')),
+            colorize: true
+        } )],
+        meta: true,
+        msg: "HTTP {{req.method}} {{req.url}} -> {{res.statusCode}} in {{res.responseTime}}ms", 
+        expressFormat: false 
+    } );
+    app.use(logger);
+} else {
+    log.info("HTTP logging is disabled. Set LOG_HTTP=true to turn on.");
+}
+
+// The root path where the calendar should be served. Default to / but could be /cal or anything else  
+var rootPath = "/";
+
+// Root
+app.get(rootPath, function (req, res) {
+    // clients which do not call the .well-known URL call the root directory
+    // these clients should be redirected to the principal URL as well...(?)
+    log.debug( "Called the root. Redirecting to /p/" );
+
+    res.set({
+        'Location': '/p/'
+        //add other headers here...?
+    });
+    res.status(302).end();
+});
+
+// .well-known
+app.get(path.join(rootPath, '.well-known'), function (req, res) {
+    log.debug("Called .well-known URL for " + req.url + ". Redirecting to /p/");
+
+    res.set({
+        'Location': '/p/'
+        //add other headers here...?
+    });
+    res.status(302).end();
+});
+
+// Handlers routes
+var setupHandlerRoute = function( handler, method ){
+    return function ( req, res ) {
+        var request = new reqlib.request( req, res );
+        handler[method]( request );
+        request.closeResponseAutomatically();
+    }
+};
+var setupHandlerRoutes = function( handler, handlerPath ){
+    var handlerPath = path.join( rootPath, handlerPath );
+    for (var method in handler) {
+        console.log("Adding route " + method.toUpperCase() + " " + handlerPath);
+        app[method]( handlerPath, setupHandlerRoute(handler, method) );
+    }
+};
+setupHandlerRoutes(require( "./handler/principal" ), 'p*');
+setupHandlerRoutes(require( "./handler/calendar" ), 'cal*');
+setupHandlerRoutes(require( "./handler/addressbook" ), 'card*');
+
+app.use(function(err, req, res, next) {
+  log.error(err.stack);
+  res.status(500).send('Something broke!');
+});
 
 // Listen on port 8888, IP defaults to 127.0.0.1
-var server = http.createServer(basic, function (req, res)
-{
-    //log.debug("Request started");
-	log.debug("Method: " + req.method + ", URL: " + req.url);
-
-	var body = "";
-
-    req.on('data', function (data)
-    {
-        body += data.toString();
-    });
-
-    req.on('end',function()
-    {
-        var request = new reqlib.request(req, res, body);
-
-        var pathname = url.parse(req.url).pathname;
-
-        if(pathname.charAt(0) == '/')
-        {
-            pathname = pathname.substr(1);
-        }
-
-        var aUrl = pathname.split("/");
-        switch(aUrl[0])
-        {
-            case '.well-known':
-                log.debug("Called .well-known URL for " + aUrl[1] + ". Redirecting to /p/");
-
-                res.writeHead(302,
-                    {
-                        'Location': '/p/'
-                        //add other headers here...?
-                    });
-                break;
-
-            // clients which do not call the .well-known URL call the root directory
-            // these clients should be redirected to the principal URL as well...(?)
-            case '':
-                log.debug("Called the root. Redirecting to /p/");
-
-                res.writeHead(302,
-                    {
-                        'Location': '/p/'
-                        //add other headers here...?
-                    });
-                break;
-
-            case 'p':
-                handler.handlePrincipal(request);
-                break;
-
-            case 'cal':
-                handler.handleCalendar(request);
-                break;
-
-            case 'card':
-                handler.handleCard(request);
-                break;
-
-            default:
-                log.info("URL unknown: " + req.url);
-                res.writeHead(500);
-                res.write(req.url + " is not known");
-                break;
-        }
-
-        request.closeResponseAutomatically();
-    });
+app.listen(config.port, function () {
+    // Put a friendly message on the terminal
+    log.info("Server running at http://" + config.ip + ":" + config.port + "/");
 });
 
-server.listen(config.port);
-
-server.on('error', function (e)
-{
-    log.debug("Error: " + e);
-});
-
-// Put a friendly message on the terminal
-log.info("Server running at http://" + config.ip + ":" + config.port + "/");

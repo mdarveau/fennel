@@ -8,13 +8,11 @@
  **
  -----------------------------------------------------------------------------*/
 
-var xml = require("libxmljs");
 var rh = require("../libs/responsehelper");
 var xh = require("../libs/xmlhelper");
 var log = require('../libs/log').log;
 var ICS = require('../libs/db').ICS;
 var CAL = require('../libs/db').CAL;
-//var Sequelize = require("sequelize");
 
 // Exporting.
 module.exports = {
@@ -22,7 +20,7 @@ module.exports = {
     proppatch: proppatch,
     report: report,
     options: options,
-    makeCalendar: makeCalendar,
+    mkcalendar: makeCalendar,
     put: put,
     get: gett,
     delete: del,
@@ -42,6 +40,7 @@ function del(request)
 
     var isRoot = true;
 
+    // FIXME @mdarveau This will not work with root path other than /
     // if URL element size === 4, this is a call for the root URL of a user.
     // TODO: check if the current user is the user requesting the resource (ACL)
     if(request.getUrlElementSize() > 4)
@@ -57,6 +56,7 @@ function del(request)
 
     if(isRoot === true)
     {
+        // FIXME @mdarveau This will not work with root path other than /
         var calendarId = request.getPathElement(3);
 
         CAL.find({ where: {pkey: calendarId} }).then(function(cal)
@@ -142,6 +142,8 @@ function put(request)
         content: request.getBody()
     };
 
+    request.dontCloseResAutomatically();
+    
     ICS.findOrCreate({ where: {pkey: ics_id}, defaults: defaults}).spread(function(ics, created)
         {
             if(created)
@@ -166,20 +168,15 @@ function put(request)
                         cal.increment('synctoken', { by: 1 }).then(function()
                         {
                             log.info('synctoken on cal updated');
+                            rh.setStandardHeaders(request);
+                            var res = request.getRes();
+                            res.setHeader("ETag", Number(new Date()));
+                            res.writeHead(201).end();
                         });
                     }
                 });
             });
         });
-
-    rh.setStandardHeaders(request);
-
-    var res = request.getRes();
-
-    var date = new Date();
-    res.setHeader("ETag", Number(date));
-
-    res.writeHead(201);
 }
 
 function move(request)
@@ -208,11 +205,14 @@ function move(request)
         var aURL = destination.split("/");
         var newCal = aURL[aURL.length - 2];
 
+        request.dontCloseResAutomatically();
+        
         ICS.find({ where: {pkey: ics_id} }).then(function(ics)
         {
             if(ics === null)
             {
                 log.warn('ics not found');
+                res.status(404).end();
             }
             else
             {
@@ -220,13 +220,12 @@ function move(request)
                 ics.save().then(function()
                 {
                     log.warn('ics updated');
+                    rh.setStandardHeaders(request);
+                    request.getRes().writeHead(201).end();
                 });
             }
         });
     }
-
-    var res = request.getRes();
-    res.writeHead(201);
 }
 
 function propfind(request)
@@ -242,8 +241,7 @@ function propfind(request)
 
     var response = "";
 
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/A:propfind/A:prop', {   A: 'DAV:',
         B: "urn:ietf:params:xml:ns:caldav",
@@ -259,12 +257,14 @@ function propfind(request)
     // if last element === username, then get all calendar info of user, otherwise only from that specific calendar
     //var lastelement = request.getLastPathElement();
 
+    // FIXME @mdarveau This will not work with root path other than /
     // if URL element size === 4, this is a call for the root URL of a user.
     // TODO:
     if(request.getUrlElementSize() > 4)
     {
         isRoot = false;
     }
+    // FIXME @mdarveau This will not work with root path other than /
     else if(request.getURL() === "/")
     {
         response += "<d:multistatus xmlns:d=\"DAV:\" xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:card=\"urn:ietf:params:xml:ns:carddav\">";
@@ -327,7 +327,7 @@ function propfind(request)
             // then add info for all further known calendars of same user
             var query = { where: {owner: username}, order: [['order', 'ASC']] };
 
-            CAL.findAndCountAll({ where: {owner: username}, order: [['order', 'ASC']] }).then(function(result)
+            CAL.findAndCountAll(query).then(function(result)
             {
                 for (var i=0; i < result.count; ++i)
                 {
@@ -348,6 +348,7 @@ function propfind(request)
     else
     {
         // otherwise get that specific calendar information
+        // FIXME @mdarveau This will not work with root path other than /
         var calendarId = request.getPathElement(3);
         if(calendarId === "notifications")
         {
@@ -377,9 +378,9 @@ function propfind(request)
                 }
                 else
                 {
-                    // for every ICS element, return the props...
-                    response += returnPropfindElements(request, cal, childs);
-
+                        // for every ICS element, return the props...
+                        response += returnPropfindElements(request, cal, childs);
+                        
                     var res = request.getRes();
 
                     res.write("<d:multistatus xmlns:d=\"DAV:\" xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:card=\"urn:ietf:params:xml:ns:carddav\">");
@@ -398,7 +399,7 @@ function propfind(request)
                     res.write("</d:response>");
                     res.write("</d:multistatus>");
                 }
-
+                    
                 request.closeRes();
             });
         }
@@ -759,8 +760,7 @@ function makeCalendar(request)
 
     rh.setStandardHeaders(request);
 
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/B:mkcalendar/A:set/A:prop', {
         A: 'DAV:',
@@ -835,6 +835,10 @@ function makeCalendar(request)
             displayname: displayname
         };
 
+        console.log("CAL.findOrCreate with " + JSON.stringify({ where: {pkey: filename}, defaults: defaults }, null, '  '));
+        
+        request.dontCloseResAutomatically();
+
         CAL.findOrCreate({ where: {pkey: filename}, defaults: defaults }).spread(function(cal, created)
             {
                 if(created)
@@ -849,16 +853,15 @@ function makeCalendar(request)
                 cal.save().then(function()
                 {
                     log.warn('cal saved');
+                    
+                    res.writeHead(201);
+                    request.closeRes();
                 });
             });
-
-        res.writeHead(201);
-        res.write(response);
     }
     else
     {
         res.writeHead(500);
-        res.write(response);
     }
 }
 
@@ -883,8 +886,7 @@ function report(request)
     res.writeHead(200);
     res.write(xh.getXMLHead());
 
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var rootNode = xmlDoc.root();
 
@@ -921,8 +923,7 @@ function handleReportCalendarQuery(request)
                 { where: {calendarId: calendarId}}
             ).then(function(result)
             {
-                var body = request.getBody();
-                var xmlDoc = xml.parseXml(body);
+                var xmlDoc = request.getXml();
 
                 var nodeProp = xmlDoc.get('/B:calendar-query/A:prop', {
                     A: 'DAV:',
@@ -1014,8 +1015,7 @@ function handleReportCalendarQuery(request)
 
 function handleReportSyncCollection(request)
 {
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/A:sync-collection', {
         A: 'DAV:',
@@ -1124,8 +1124,7 @@ function handleReportCalendarProp(request, node, cal, ics)
 
 function handleReportCalendarMultiget(request)
 {
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/B:calendar-multiget', {
         A: 'DAV:',
@@ -1223,8 +1222,7 @@ function proppatch(request)
 
     res.write(xh.getXMLHead());
 
-    var body = request.getBody();
-    var xmlDoc = xml.parseXml(body);
+    var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/A:propertyupdate/A:set/A:prop', {
         A: 'DAV:',
