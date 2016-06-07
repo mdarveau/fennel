@@ -1,0 +1,303 @@
+Using http://localhost:5232/mdarveau/ in lightning. Using only http://localhost:5232/ does not work
+
+
+Base URL prefix: /
+Listening to republic.local port 5232
+Radicale server ready
+PROPFIND request at /mdarveau/ received
+Request headers:
+{'CONTENT_LENGTH': '306',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.5',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:45.0) Gecko/20100101 Thunderbird/45.1.1 Lightning/4.7.1.1',
+ 'PATH_INFO': '/mdarveau/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x1090a81e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x109700120>,
+ 'wsgi.input': <socket._fileobject object at 0x1097713d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /mdarveau/
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<D:propfind xmlns:D="DAV:" xmlns:CS="http://calendarserver.org/ns/" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:resourcetype/><D:owner/><D:current-user-principal/><D:supported-report-set/><C:supported-calendar-component-set/><CS:getctag/></D:prop></D:propfind>
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:CS="http://calendarserver.org/ns/">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <resourcetype>
+          <C:calendar />
+          <collection />
+        </resourcetype>
+        <supported-report-set>
+          <supported-report>
+            <report>principal-property-search</report>
+          </supported-report>
+          <supported-report>
+            <report>sync-collection</report>
+          </supported-report>
+          <supported-report>
+            <report>expand-property</report>
+          </supported-report>
+          <supported-report>
+            <report>principal-search-property-set</report>
+          </supported-report>
+        </supported-report-set>
+        <C:supported-calendar-component-set>
+          <C:comp name="VTODO" />
+          <C:comp name="VEVENT" />
+          <C:comp name="VJOURNAL" />
+        </C:supported-calendar-component-set>
+        <CS:getctag>"34d0aa982e864d3fcd3ff37558075810"</CS:getctag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <owner />
+        <current-user-principal />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+OPTIONS request at / received
+Request headers:
+{'CONTENT_LENGTH': '',
+ 'CONTENT_TYPE': 'text/plain',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.5',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:45.0) Gecko/20100101 Thunderbird/45.1.1 Lightning/4.7.1.1',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'OPTIONS',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x1090a81e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x109700120>,
+ 'wsgi.input': <socket._fileobject object at 0x1097713d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Answer status: 200 OK
+PROPFIND request at /mdarveau/ received
+Request headers:
+{'CONTENT_LENGTH': '144',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.5',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:45.0) Gecko/20100101 Thunderbird/45.1.1 Lightning/4.7.1.1',
+ 'PATH_INFO': '/mdarveau/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x1090a81e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x109700120>,
+ 'wsgi.input': <socket._fileobject object at 0x1097713d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /mdarveau/
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Anonymous has read access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Anonymous has write access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<D:propfind xmlns:D="DAV:"><D:prop><D:getcontenttype/><D:resourcetype/><D:getetag/></D:prop></D:propfind>
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar</getcontenttype>
+        <resourcetype>
+          <principal />
+          <C:calendar />
+          <collection />
+        </resourcetype>
+        <getetag>"34d0aa982e864d3fcd3ff37558075810"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/mdarveau/8E7457E0-3BD2-4661-821F-41EEA6588F29</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <resourcetype />
+        <getetag>"1e503320deb1a65baea6d77b50401426"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+REPORT request at /mdarveau/ received
+Request headers:
+{'CONTENT_LENGTH': '247',
+ 'CONTENT_TYPE': 'text/xml; charset=utf-8',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': 'text/xml',
+ 'HTTP_ACCEPT_CHARSET': 'utf-8,*;q=0.1',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.5',
+ 'HTTP_CACHE_CONTROL': 'no-cache',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': 'localhost:5232',
+ 'HTTP_PRAGMA': 'no-cache',
+ 'HTTP_USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:45.0) Gecko/20100101 Thunderbird/45.1.1 Lightning/4.7.1.1',
+ 'PATH_INFO': '/mdarveau/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x1090a81e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x109700120>,
+ 'wsgi.input': <socket._fileobject object at 0x1097713d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /mdarveau/
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Anonymous has read access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Anonymous has write access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<C:calendar-multiget xmlns:D="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav"><D:prop><D:getetag/><C:calendar-data/></D:prop><D:href>/mdarveau/8E7457E0-3BD2-4661-821F-41EEA6588F29</D:href></C:calendar-multiget>
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/mdarveau/8E7457E0-3BD2-4661-821F-41EEA6588F29</href>
+    <propstat>
+      <prop>
+        <getetag>"1e503320deb1a65baea6d77b50401426"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//Mac OS X 10.11.5//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+CREATED:20160607T034841Z
+UID:AC443052-54FF-41D4-9A02-1BD6EFD99A04
+DTEND;TZID=America/Montreal:20160607T100000
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+SUMMARY:event1
+DTSTART;TZID=America/Montreal:20160607T090000
+DTSTAMP:20160607T034851Z
+SEQUENCE:0
+BEGIN:VALARM
+X-WR-ALARMUID:8E7457E0-3BD2-4661-821F-41EEA6588F29
+UID:8E7457E0-3BD2-4661-821F-41EEA6588F29
+TRIGGER:-PT5M
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Basso
+ACTION:AUDIO
+X-RADICALE-NAME:8E7457E0-3BD2-4661-821F-41EEA6588F29
+END:VALARM
+X-RADICALE-NAME:8E7457E0-3BD2-4661-821F-41EEA6588F29
+END:VEVENT
+BEGIN:VTIMEZONE
+TZID:America/Montreal
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+DTSTART:20070311T020000
+TZNAME:GMT-4
+TZOFFSETTO:-0400
+X-RADICALE-NAME:America/Montreal
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+DTSTART:20071104T020000
+TZNAME:GMT-5
+TZOFFSETTO:-0500
+X-RADICALE-NAME:America/Montreal
+END:STANDARD
+X-RADICALE-NAME:America/Montreal
+END:VTIMEZONE
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+

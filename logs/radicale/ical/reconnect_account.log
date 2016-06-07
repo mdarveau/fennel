@@ -1,0 +1,1195 @@
+PROPFIND request at / received
+Request headers:
+{'CONTENT_LENGTH': '127',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:principal-URL/>
+  </A:prop>
+</A:propfind>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <principal-URL>
+          <href>/</href>
+        </principal-URL>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PROPFIND request at / received
+Request headers:
+{'CONTENT_LENGTH': '743',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <B:calendar-home-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:calendar-user-address-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:current-user-principal/>
+    <A:displayname/>
+    <C:dropbox-home-URL xmlns:C="http://calendarserver.org/ns/"/>
+    <C:email-address-set xmlns:C="http://calendarserver.org/ns/"/>
+    <C:notification-URL xmlns:C="http://calendarserver.org/ns/"/>
+    <A:principal-collection-set/>
+    <A:principal-URL/>
+    <A:resource-id/>
+    <B:schedule-inbox-URL xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:schedule-outbox-URL xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:supported-report-set/>
+  </A:prop>
+</A:propfind>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:CS="http://calendarserver.org/ns/">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <C:calendar-home-set>
+          <href>/</href>
+        </C:calendar-home-set>
+        <C:calendar-user-address-set>
+          <href>/</href>
+        </C:calendar-user-address-set>
+        <displayname>test_calendar</displayname>
+        <principal-collection-set>
+          <href>/</href>
+        </principal-collection-set>
+        <principal-URL>
+          <href>/</href>
+        </principal-URL>
+        <supported-report-set>
+          <supported-report>
+            <report>principal-property-search</report>
+          </supported-report>
+          <supported-report>
+            <report>sync-collection</report>
+          </supported-report>
+          <supported-report>
+            <report>expand-property</report>
+          </supported-report>
+          <supported-report>
+            <report>principal-search-property-set</report>
+          </supported-report>
+        </supported-report-set>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <current-user-principal />
+        <CS:dropbox-home-URL />
+        <CS:email-address-set />
+        <CS:notification-URL />
+        <resource-id />
+        <C:schedule-inbox-URL />
+        <C:schedule-outbox-URL />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+OPTIONS request at / received
+Request headers:
+{'CONTENT_LENGTH': '0',
+ 'CONTENT_TYPE': 'text/plain',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'OPTIONS',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Answer status: 200 OK
+PROPFIND request at / received
+Request headers:
+{'CONTENT_LENGTH': '2217',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Anonymous has read access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Anonymous has write access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:add-member/>
+    <C:allowed-sharing-modes xmlns:C="http://calendarserver.org/ns/"/>
+    <D:autoprovisioned xmlns:D="http://apple.com/ns/ical/"/>
+    <E:bulk-requests xmlns:E="http://me.com/_namespace/"/>
+    <B:calendar-alarm xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <D:calendar-color xmlns:D="http://apple.com/ns/ical/"/>
+    <B:calendar-description xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:calendar-free-busy-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <D:calendar-order xmlns:D="http://apple.com/ns/ical/"/>
+    <B:calendar-timezone xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:current-user-privilege-set/>
+    <B:default-alarm-vevent-date xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:default-alarm-vevent-datetime xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:displayname/>
+    <C:getctag xmlns:C="http://calendarserver.org/ns/"/>
+    <C:invite xmlns:C="http://calendarserver.org/ns/"/>
+    <D:language-code xmlns:D="http://apple.com/ns/ical/"/>
+    <D:location-code xmlns:D="http://apple.com/ns/ical/"/>
+    <A:owner/>
+    <C:pre-publish-url xmlns:C="http://calendarserver.org/ns/"/>
+    <C:publish-url xmlns:C="http://calendarserver.org/ns/"/>
+    <C:push-transports xmlns:C="http://calendarserver.org/ns/"/>
+    <C:pushkey xmlns:C="http://calendarserver.org/ns/"/>
+    <A:quota-available-bytes/>
+    <A:quota-used-bytes/>
+    <D:refreshrate xmlns:D="http://apple.com/ns/ical/"/>
+    <A:resource-id/>
+    <A:resourcetype/>
+    <B:schedule-calendar-transp xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:schedule-default-calendar-URL xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <C:source xmlns:C="http://calendarserver.org/ns/"/>
+    <C:subscribed-strip-alarms xmlns:C="http://calendarserver.org/ns/"/>
+    <C:subscribed-strip-attachments xmlns:C="http://calendarserver.org/ns/"/>
+    <C:subscribed-strip-todos xmlns:C="http://calendarserver.org/ns/"/>
+    <B:supported-calendar-component-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:supported-calendar-component-sets xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:supported-report-set/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:CS="http://calendarserver.org/ns/" xmlns:ICAL="http://apple.com/ns/ical/" xmlns:ME="http://me.com/_namespace/">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <ICAL:calendar-color>#5d3354</ICAL:calendar-color>
+        <ICAL:calendar-order>1</ICAL:calendar-order>
+        <C:calendar-timezone>BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//Mac OS X 10.11.5//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/Montreal
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+DTSTART:20070311T020000
+TZNAME:GMT-4
+TZOFFSETTO:-0400
+X-RADICALE-NAME:America/Montreal
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+DTSTART:20071104T020000
+TZNAME:GMT-5
+TZOFFSETTO:-0500
+X-RADICALE-NAME:America/Montreal
+END:STANDARD
+X-RADICALE-NAME:America/Montreal
+END:VTIMEZONE
+END:VCALENDAR
+</C:calendar-timezone>
+        <current-user-privilege-set>
+          <privilege>
+            <all />
+            <read />
+            <write />
+            <write-properties />
+            <write-content />
+          </privilege>
+        </current-user-privilege-set>
+        <C:default-alarm-vevent-date>BEGIN:VALARM
+X-WR-ALARMUID:F10999CC-D2FE-484B-933D-72C1A2C56A26
+UID:F10999CC-D2FE-484B-933D-72C1A2C56A26
+TRIGGER:-PT15H
+ATTACH;VALUE=URI:Basso
+ACTION:AUDIO
+END:VALARM
+</C:default-alarm-vevent-date>
+        <C:default-alarm-vevent-datetime>BEGIN:VALARM
+X-WR-ALARMUID:8E7457E0-3BD2-4661-821F-41EEA6588F29
+UID:8E7457E0-3BD2-4661-821F-41EEA6588F29
+TRIGGER:-PT5M
+ATTACH;VALUE=URI:Basso
+ACTION:AUDIO
+END:VALARM
+</C:default-alarm-vevent-datetime>
+        <displayname>test_calendar</displayname>
+        <CS:getctag>"eaf3276621340d3a832cdeba38a28599"</CS:getctag>
+        <resourcetype>
+          <principal />
+          <C:calendar />
+          <collection />
+        </resourcetype>
+        <C:supported-calendar-component-set>
+          <C:comp name="VTODO" />
+          <C:comp name="VEVENT" />
+          <C:comp name="VJOURNAL" />
+        </C:supported-calendar-component-set>
+        <supported-report-set>
+          <supported-report>
+            <report>principal-property-search</report>
+          </supported-report>
+          <supported-report>
+            <report>sync-collection</report>
+          </supported-report>
+          <supported-report>
+            <report>expand-property</report>
+          </supported-report>
+          <supported-report>
+            <report>principal-search-property-set</report>
+          </supported-report>
+        </supported-report-set>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <add-member />
+        <CS:allowed-sharing-modes />
+        <ICAL:autoprovisioned />
+        <ME:bulk-requests />
+        <C:calendar-alarm />
+        <C:calendar-description />
+        <C:calendar-free-busy-set />
+        <CS:invite />
+        <ICAL:language-code />
+        <ICAL:location-code />
+        <owner />
+        <CS:pre-publish-url />
+        <CS:publish-url />
+        <CS:push-transports />
+        <CS:pushkey />
+        <quota-available-bytes />
+        <quota-used-bytes />
+        <ICAL:refreshrate />
+        <resource-id />
+        <C:schedule-calendar-transp />
+        <C:schedule-default-calendar-URL />
+        <CS:source />
+        <CS:subscribed-strip-alarms />
+        <CS:subscribed-strip-attachments />
+        <CS:subscribed-strip-todos />
+        <C:supported-calendar-component-sets />
+        <sync-token />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/8E7457E0-3BD2-4661-821F-41EEA6588F29</href>
+    <propstat>
+      <prop>
+        <current-user-privilege-set>
+          <privilege>
+            <all />
+            <read />
+            <write />
+            <write-properties />
+            <write-content />
+          </privilege>
+        </current-user-privilege-set>
+        <resourcetype />
+        <C:supported-calendar-component-set>
+          <C:comp name="VTODO" />
+          <C:comp name="VEVENT" />
+          <C:comp name="VJOURNAL" />
+        </C:supported-calendar-component-set>
+        <supported-report-set>
+          <supported-report>
+            <report>principal-property-search</report>
+          </supported-report>
+          <supported-report>
+            <report>sync-collection</report>
+          </supported-report>
+          <supported-report>
+            <report>expand-property</report>
+          </supported-report>
+          <supported-report>
+            <report>principal-search-property-set</report>
+          </supported-report>
+        </supported-report-set>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <add-member />
+        <CS:allowed-sharing-modes />
+        <ICAL:autoprovisioned />
+        <ME:bulk-requests />
+        <C:calendar-alarm />
+        <ICAL:calendar-color />
+        <C:calendar-description />
+        <C:calendar-free-busy-set />
+        <ICAL:calendar-order />
+        <C:calendar-timezone />
+        <C:default-alarm-vevent-date />
+        <C:default-alarm-vevent-datetime />
+        <displayname />
+        <CS:getctag />
+        <CS:invite />
+        <ICAL:language-code />
+        <ICAL:location-code />
+        <owner />
+        <CS:pre-publish-url />
+        <CS:publish-url />
+        <CS:push-transports />
+        <CS:pushkey />
+        <quota-available-bytes />
+        <quota-used-bytes />
+        <ICAL:refreshrate />
+        <resource-id />
+        <C:schedule-calendar-transp />
+        <C:schedule-default-calendar-URL />
+        <CS:source />
+        <CS:subscribed-strip-alarms />
+        <CS:subscribed-strip-attachments />
+        <CS:subscribed-strip-todos />
+        <C:supported-calendar-component-sets />
+        <sync-token />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PROPFIND request at / received
+Request headers:
+{'CONTENT_LENGTH': '267',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <B:calendar-user-address-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:displayname/>
+    <C:email-address-set xmlns:C="http://calendarserver.org/ns/"/>
+  </A:prop>
+</A:propfind>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:CS="http://calendarserver.org/ns/">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <C:calendar-user-address-set>
+          <href>/</href>
+        </C:calendar-user-address-set>
+        <displayname>test_calendar</displayname>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <CS:email-address-set />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PROPPATCH request at / received
+Request headers:
+{'CONTENT_LENGTH': '752',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPPATCH',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propertyupdate xmlns:A="DAV:"><A:set><A:prop><B:calendar-timezone xmlns:B="urn:ietf:params:xml:ns:caldav">BEGIN:VCALENDAR&#13;
+VERSION:2.0&#13;
+PRODID:-//Apple Inc.//Mac OS X 10.11.5//EN&#13;
+CALSCALE:GREGORIAN&#13;
+BEGIN:VTIMEZONE&#13;
+TZID:America/Montreal&#13;
+BEGIN:DAYLIGHT&#13;
+TZOFFSETFROM:-0500&#13;
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU&#13;
+DTSTART:20070311T020000&#13;
+TZNAME:GMT-4&#13;
+TZOFFSETTO:-0400&#13;
+END:DAYLIGHT&#13;
+BEGIN:STANDARD&#13;
+TZOFFSETFROM:-0400&#13;
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU&#13;
+DTSTART:20071104T020000&#13;
+TZNAME:GMT-5&#13;
+TZOFFSETTO:-0500&#13;
+END:STANDARD&#13;
+END:VTIMEZONE&#13;
+END:VCALENDAR&#13;
+</B:calendar-timezone></A:prop></A:set></A:propertyupdate>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <C:calendar-timezone />
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PROPFIND request at / received
+Request headers:
+{'CONTENT_LENGTH': '181',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <C:getctag xmlns:C="http://calendarserver.org/ns/"/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:CS="http://calendarserver.org/ns/">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <CS:getctag>"34d0aa982e864d3fcd3ff37558075810"</CS:getctag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <sync-token />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+REPORT request at / received
+Request headers:
+{'CONTENT_LENGTH': '413',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Anonymous has read access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Anonymous has write access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<B:calendar-query xmlns:B="urn:ietf:params:xml:ns:caldav">
+  <A:prop xmlns:A="DAV:">
+    <A:getcontenttype/>
+    <A:getetag/>
+  </A:prop>
+  <B:filter>
+    <B:comp-filter name="VCALENDAR">
+      <B:comp-filter name="VEVENT">
+        <B:time-range start="20160531T010101Z" end="20160621T010101Z"/>
+      </B:comp-filter>
+    </B:comp-filter>
+  </B:filter>
+</B:calendar-query>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:">
+  <response>
+    <href>/8E7457E0-3BD2-4661-821F-41EEA6588F29</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <getetag>"1e503320deb1a65baea6d77b50401426"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+REPORT request at / received
+Request headers:
+{'CONTENT_LENGTH': '318',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Anonymous has read access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Anonymous has write access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<B:calendar-query xmlns:B="urn:ietf:params:xml:ns:caldav">
+  <A:prop xmlns:A="DAV:">
+    <A:getcontenttype/>
+    <A:getetag/>
+  </A:prop>
+  <B:filter>
+    <B:comp-filter name="VCALENDAR">
+      <B:comp-filter name="VTODO"/>
+    </B:comp-filter>
+  </B:filter>
+</B:calendar-query>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" />
+Answer status: 207 Unknown
+REPORT request at / received
+Request headers:
+{'CONTENT_LENGTH': '394',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'REPORT',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<B:calendar-multiget xmlns:B="urn:ietf:params:xml:ns:caldav">
+  <A:prop xmlns:A="DAV:">
+    <A:getetag/>
+    <B:calendar-data/>
+    <C:updated-by xmlns:C="http://calendarserver.org/ns/"/>
+    <C:created-by xmlns:C="http://calendarserver.org/ns/"/>
+  </A:prop>
+  <A:href xmlns:A="DAV:">/8E7457E0-3BD2-4661-821F-41EEA6588F29</A:href>
+</B:calendar-multiget>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:CS="http://calendarserver.org/ns/">
+  <response>
+    <href>/8E7457E0-3BD2-4661-821F-41EEA6588F29/8E7457E0-3BD2-4661-821F-41EEA6588F29</href>
+    <propstat>
+      <prop>
+        <getetag>"1e503320deb1a65baea6d77b50401426"</getetag>
+        <C:calendar-data>BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//Mac OS X 10.11.5//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+CREATED:20160607T034841Z
+UID:AC443052-54FF-41D4-9A02-1BD6EFD99A04
+DTEND;TZID=America/Montreal:20160607T100000
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+SUMMARY:event1
+DTSTART;TZID=America/Montreal:20160607T090000
+DTSTAMP:20160607T034851Z
+SEQUENCE:0
+BEGIN:VALARM
+X-WR-ALARMUID:8E7457E0-3BD2-4661-821F-41EEA6588F29
+UID:8E7457E0-3BD2-4661-821F-41EEA6588F29
+TRIGGER:-PT5M
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Basso
+ACTION:AUDIO
+X-RADICALE-NAME:8E7457E0-3BD2-4661-821F-41EEA6588F29
+END:VALARM
+X-RADICALE-NAME:8E7457E0-3BD2-4661-821F-41EEA6588F29
+END:VEVENT
+BEGIN:VTIMEZONE
+TZID:America/Montreal
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+DTSTART:20070311T020000
+TZNAME:GMT-4
+TZOFFSETTO:-0400
+X-RADICALE-NAME:America/Montreal
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+DTSTART:20071104T020000
+TZNAME:GMT-5
+TZOFFSETTO:-0500
+X-RADICALE-NAME:America/Montreal
+END:STANDARD
+X-RADICALE-NAME:America/Montreal
+END:VTIMEZONE
+END:VCALENDAR
+</C:calendar-data>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <CS:updated-by />
+        <CS:created-by />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PROPFIND request at / received
+Request headers:
+{'CONTENT_LENGTH': '171',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <C:checksum-versions xmlns:C="http://calendarserver.org/ns/"/>
+  </A:prop>
+</A:propfind>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:CS="http://calendarserver.org/ns/">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop />
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <CS:checksum-versions />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PROPFIND request at / received
+Request headers:
+{'CONTENT_LENGTH': '181',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <C:getctag xmlns:C="http://calendarserver.org/ns/"/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:CS="http://calendarserver.org/ns/">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <CS:getctag>"34d0aa982e864d3fcd3ff37558075810"</CS:getctag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <sync-token />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PROPFIND request at / received
+Request headers:
+{'CONTENT_LENGTH': '145',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '1',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Anonymous has read access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Anonymous has write access to item 8E7457E0-3BD2-4661-821F-41EEA6588F29
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:getcontenttype/>
+    <A:getetag/>
+  </A:prop>
+</A:propfind>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:">
+  <response>
+    <href>/8E7457E0-3BD2-4661-821F-41EEA6588F29</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar; component=vevent</getcontenttype>
+        <getetag>"1e503320deb1a65baea6d77b50401426"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <getcontenttype>text/calendar</getcontenttype>
+        <getetag>"34d0aa982e864d3fcd3ff37558075810"</getetag>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+PROPFIND request at / received
+Request headers:
+{'CONTENT_LENGTH': '170',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_BRIEF': 't',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_DEPTH': '0',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_PREFER': 'return=minimal',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPFIND',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10f0ca1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x10f724120>,
+ 'wsgi.input': <socket._fileobject object at 0x10f7953d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:current-user-principal/>
+    <A:principal-collection-set/>
+  </A:prop>
+</A:propfind>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <principal-collection-set>
+          <href>/</href>
+        </principal-collection-set>
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+    <propstat>
+      <prop>
+        <current-user-principal />
+      </prop>
+      <status>HTTP/1.1 404 Not Found</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+

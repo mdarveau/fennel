@@ -1,0 +1,69 @@
+PROPPATCH request at / received
+Request headers:
+{'CONTENT_LENGTH': '168',
+ 'CONTENT_TYPE': 'text/xml',
+ 'GATEWAY_INTERFACE': 'CGI/1.1',
+ 'HTTP_ACCEPT': '*/*',
+ 'HTTP_ACCEPT_ENCODING': 'gzip, deflate',
+ 'HTTP_ACCEPT_LANGUAGE': 'en-us',
+ 'HTTP_CONNECTION': 'keep-alive',
+ 'HTTP_HOST': '127.0.0.1:5232',
+ 'HTTP_USER_AGENT': 'Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2',
+ 'PATH_INFO': '/',
+ 'QUERY_STRING': '',
+ 'REMOTE_ADDR': '127.0.0.1',
+ 'REMOTE_HOST': '1.0.0.127.in-addr.arpa',
+ 'REQUEST_METHOD': 'PROPPATCH',
+ 'SCRIPT_NAME': '',
+ 'SERVER_NAME': 'republic.local',
+ 'SERVER_PORT': '5232',
+ 'SERVER_PROTOCOL': 'HTTP/1.1',
+ 'SERVER_SOFTWARE': 'WSGIServer/0.1 Python/2.7.9',
+ 'wsgi.errors': <open file '<stderr>', mode 'w' at 0x10383a1e0>,
+ 'wsgi.file_wrapper': <class wsgiref.util.FileWrapper at 0x103e94120>,
+ 'wsgi.input': <socket._fileobject object at 0x103f053d0>,
+ 'wsgi.multiprocess': False,
+ 'wsgi.multithread': True,
+ 'wsgi.run_once': False,
+ 'wsgi.url_scheme': 'http',
+ 'wsgi.version': (1, 0)}
+Sanitized path: /
+Anonymous has read access to collection /
+Anonymous has write access to collection /
+Request content:
+<?xml version="1.0" encoding="UTF-8"?>
+<A:propertyupdate xmlns:A="DAV:"><A:set><A:prop><A:displayname>test_calendar</A:displayname></A:prop></A:set></A:propertyupdate>
+
+Response content:
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:">
+  <response>
+    <href>/</href>
+    <propstat>
+      <prop>
+        <displayname />
+      </prop>
+      <status>HTTP/1.1 200 OK</status>
+    </propstat>
+  </response>
+</multistatus>
+
+Answer status: 207 Unknown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
