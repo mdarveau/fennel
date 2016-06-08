@@ -20,15 +20,15 @@ module.exports = {
 
 function request(req, res)
 {
-    this.response = "";
     
     this.req = req;
     this.res = res;
     
-    this.res.writeHead = function(status){
-        this.responseStatus = status;
-    }.bind( this );
+    // this.res.writeHead = function(status){
+    //     this.responseStatus = status;
+    // }.bind( this );
     
+    this.response = "";
     this.res.write = function(data){
         this.response += data;
     }.bind( this );
@@ -63,7 +63,14 @@ request.prototype.closeRes = function()
 {
     // Format output for log
     this.response = xml.parseXml( this.response ).toString();
-    this.res.status(this.responseStatus).send(this.response);
+    if(this.responseStatus != null) {
+        console.log("Returning status: " + this.responseStatus);
+        this.res.status( this.responseStatus );
+    }
+    console.log("Returning response: " + this.response);
+    this.res.write(this.response);
+    this.res.end();
+    // this.res.end();
 };
 
 
