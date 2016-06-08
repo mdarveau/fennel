@@ -96,7 +96,7 @@ if ( process.env.LOG_HTTP !== 'false' ) {
 var rootPath = "/";
 
 // Root
-app.get(rootPath, function (req, res) {
+var rootRedirect = function (req, res) {
     // clients which do not call the .well-known URL call the root directory
     // these clients should be redirected to the principal URL as well...(?)
     log.debug( "Called the root. Redirecting to /p/" );
@@ -106,7 +106,9 @@ app.get(rootPath, function (req, res) {
         //add other headers here...?
     });
     res.status(302).end();
-});
+};
+app.get(rootPath, rootRedirect);
+app.propfind(rootPath, rootRedirect);
 
 // .well-known
 app.get(path.join(rootPath, '.well-known'), function (req, res) {

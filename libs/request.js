@@ -20,8 +20,18 @@ module.exports = {
 
 function request(req, res)
 {
+    this.response = "";
+    
     this.req = req;
     this.res = res;
+    
+    this.res.writeHead = function(status){
+        this.responseStatus = status;
+    }.bind( this );
+    
+    this.res.write = function(data){
+        this.response += data;
+    }.bind( this );
 
     var header = req.headers['authorization']||'';        // get the header
     var token = header.split(/\s+/).pop()||'';            // and the encoded auth token
@@ -45,13 +55,15 @@ request.prototype.closeResponseAutomatically = function()
 {
     if(this.closeResAutomatically)
     {
-        this.res.end();
+        this.closeRes();
     }
 };
 
 request.prototype.closeRes = function()
 {
-    this.res.end();
+    // Format output for log
+    this.response = xml.parseXml( this.response ).toString();
+    this.res.status(this.responseStatus).send(this.response);
 };
 
 
