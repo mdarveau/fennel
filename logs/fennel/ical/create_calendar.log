@@ -1,0 +1,310 @@
+[2016-06-09 21:23:54.987] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:54.987] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:54.989] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:54.990] [DEBUG] fennelapp - calendar.propfind called
+request.getUrlElementSize(): 4
+[2016-06-09 21:23:55.001] [INFO] fennelapp - Executing (default): SELECT count(*) AS "count" FROM "CALs" AS "CAL" WHERE "CAL"."owner" = 'fennel';
+info: HTTP PROPFIND /cal/fennel/ -> 207 in 14ms statusCode=207, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"><d:response><d:href>/cal/fennel/</d:href><d:propstat><d:prop><d:current-user-privilege-set><d:privilege xmlns:d="DAV:"><cal:read-free-busy/></d:privilege><d:privilege xmlns:d="DAV:"><d:write/></d:privilege><d:privilege xmlns:d="DAV:"><d:write-acl/></d:privilege><d:privilege xmlns:d="DAV:"><d:write-content/></d:privilege><d:privilege xmlns:d="DAV:"><d:write-properties/></d:privilege><d:privilege xmlns:d="DAV:"><d:bind/></d:privilege><d:privilege xmlns:d="DAV:"><d:unbind/></d:privilege><d:privilege xmlns:d="DAV:"><d:unlock/></d:privilege><d:privilege xmlns:d="DAV:"><d:read/></d:privilege><d:privilege xmlns:d="DAV:"><d:read-acl/></d:privilege><d:privilege xmlns:d="DAV:"><d:read-current-user-privilege-set/></d:privilege></d:current-user-privilege-set><d:owner><d:href>/p/fennel/</d:href></d:owner><d:resourcetype><d:collection/></d:resourcetype><d:supported-report-set><d:supported-report><d:report><d:sync-collection/></d:report></d:supported-report><d:supported-report><d:report><d:expand-property/></d:report></d:supported-report><d:supported-report><d:report><d:principal-property-search/></d:report></d:supported-report><d:supported-report><d:report><d:principal-search-property-set/></d:report></d:supported-report></d:supported-report-set></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response>   <d:href>/cal/fennel/outbox/</d:href>    <d:propstat>        <d:prop>            <d:current-user-privilege-set>               <d:privilege xmlns:d="DAV:">                   <d:read/>               </d:privilege>               <d:privilege xmlns:d="DAV:">                   <d:read-acl/>               </d:privilege>               <d:privilege xmlns:d="DAV:">                   <d:read-current-user-privilege-set/>               </d:privilege>               <d:privilege xmlns:d="DAV:">                   <d:schedule-post-vevent xmlns:d="urn:ietf:params:xml:ns:caldav"/>               </d:privilege>               <d:privilege xmlns:d="DAV:">                   <d:schedule-query-freebusy xmlns:d="urn:ietf:params:xml:ns:caldav"/>               </d:privilege>           </d:current-user-privilege-set>           <d:owner>               <d:href>/p/fennel/</d:href>           </d:owner>           <d:resourcetype>              <d:collection/>               <cal:schedule-outbox/>           </d:resourcetype>           <d:supported-report-set>              <d:supported-report>                   <d:report>                       <d:expand-property/>                   </d:report>               </d:supported-report>               <d:supported-report>                   <d:report>                       <d:principal-property-search/>                   </d:report>               </d:supported-report>               <d:supported-report>                    <d:report>                       <d:principal-search-property-set/>                   </d:report>               </d:supported-report>            </d:supported-report-set>       </d:prop>       <d:status>HTTP/1.1 200 OK</d:status>   </d:propstat></d:response><d:response><d:href>/cal/fennel/notifications/</d:href><d:propstat>    <d:prop>        <d:current-user-privilege-set>            <d:privilege xmlns:d="DAV:">                <d:write/>           </d:privilege>           <d:privilege xmlns:d="DAV:">               <d:write-acl/>           </d:privilege>           <d:privilege xmlns:d="DAV:">               <d:write-properties/>          </d:privilege>           <d:privilege xmlns:d="DAV:">               <d:write-content/>           </d:privilege>            <d:privilege xmlns:d="DAV:">               <d:bind/>            </d:privilege>            <d:privilege xmlns:d="DAV:">                <d:unbind/>            </d:privilege>            <d:privilege xmlns:d="DAV:">                <d:unlock/>           </d:privilege>           <d:privilege xmlns:d="DAV:">               <d:read/>           </d:privilege>           <d:privilege xmlns:d="DAV:">                <d:read-acl/>           </d:privilege>           <d:privilege xmlns:d="DAV:">               <d:read-current-user-privilege-set/>            </d:privilege>       </d:current-user-privilege-set>       <d:owner>           <d:href>/p/fennel/</d:href>       </d:owner>       <d:resourcetype>           <d:collection/>           <cs:notification/>       </d:resourcetype>       <d:supported-report-set>           <d:supported-report>               <d:report>                   <d:expand-property/>               </d:report>           </d:supported-report>           <d:supported-report>               <d:report>                   <d:principal-property-search/>               </d:report>           </d:supported-report>          <d:supported-report>               <d:report>                  <d:principal-search-property-set/>              </d:report>           </d:supported-report>       </d:supported-report-set>   </d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>, url=/cal/fennel/, host=127.0.0.1:8888, accept=*/*, brief=t, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-language=en-us, accept-encoding=gzip, deflate, content-type=text/xml, content-length=2217, depth=1, connection=keep-alive, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, prefer=return=minimal, method=PROPFIND, httpVersion=1.1, originalUrl=/cal/fennel/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:add-member/>
+    <C:allowed-sharing-modes xmlns:C="http://calendarserver.org/ns/"/>
+    <D:autoprovisioned xmlns:D="http://apple.com/ns/ical/"/>
+    <E:bulk-requests xmlns:E="http://me.com/_namespace/"/>
+    <B:calendar-alarm xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <D:calendar-color xmlns:D="http://apple.com/ns/ical/"/>
+    <B:calendar-description xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:calendar-free-busy-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <D:calendar-order xmlns:D="http://apple.com/ns/ical/"/>
+    <B:calendar-timezone xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:current-user-privilege-set/>
+    <B:default-alarm-vevent-date xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:default-alarm-vevent-datetime xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:displayname/>
+    <C:getctag xmlns:C="http://calendarserver.org/ns/"/>
+    <C:invite xmlns:C="http://calendarserver.org/ns/"/>
+    <D:language-code xmlns:D="http://apple.com/ns/ical/"/>
+    <D:location-code xmlns:D="http://apple.com/ns/ical/"/>
+    <A:owner/>
+    <C:pre-publish-url xmlns:C="http://calendarserver.org/ns/"/>
+    <C:publish-url xmlns:C="http://calendarserver.org/ns/"/>
+    <C:push-transports xmlns:C="http://calendarserver.org/ns/"/>
+    <C:pushkey xmlns:C="http://calendarserver.org/ns/"/>
+    <A:quota-available-bytes/>
+    <A:quota-used-bytes/>
+    <D:refreshrate xmlns:D="http://apple.com/ns/ical/"/>
+    <A:resource-id/>
+    <A:resourcetype/>
+    <B:schedule-calendar-transp xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:schedule-default-calendar-URL xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <C:source xmlns:C="http://calendarserver.org/ns/"/>
+    <C:subscribed-strip-alarms xmlns:C="http://calendarserver.org/ns/"/>
+    <C:subscribed-strip-attachments xmlns:C="http://calendarserver.org/ns/"/>
+    <C:subscribed-strip-todos xmlns:C="http://calendarserver.org/ns/"/>
+    <B:supported-calendar-component-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:supported-calendar-component-sets xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:supported-report-set/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+, responseTime=14
+[2016-06-09 21:23:55.008] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:55.008] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:55.010] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:55.010] [DEBUG] fennelapp - calendar.proppatch called
+[2016-06-09 21:23:55.012] [INFO] fennelapp - Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'fennel';
+[2016-06-09 21:23:55.013] [WARN] fennelapp - Calendar not found
+[2016-06-09 21:23:55.013] [INFO] fennelapp - proppatch default-alarm-vevent-date not handled yet
+info: HTTP PROPPATCH /cal/fennel/ -> 200 in 3ms statusCode=200, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav" xmlns:ical="http://apple.com/ns/ical/">
+	<d:response>
+		<d:href>/cal/fennel/</d:href>
+		<d:propstat>
+			<d:prop>
+<cal:default-alarm-vevent-date/>			</d:prop>
+			<d:status>HTTP/1.1 403 Forbidden</d:status>
+		</d:propstat>
+	</d:response>
+</d:multistatus>
+, url=/cal/fennel/, host=127.0.0.1:8888, content-type=text/xml, authorization=Basic ZmVubmVsOmZlbm5lbA==, connection=keep-alive, accept=*/*, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, content-length=425, accept-language=en-us, accept-encoding=gzip, deflate, method=PROPPATCH, httpVersion=1.1, originalUrl=/cal/fennel/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propertyupdate xmlns:A="DAV:"><A:set><A:prop><B:default-alarm-vevent-date xmlns:B="urn:ietf:params:xml:ns:caldav">BEGIN:VALARM&#13;
+X-WR-ALARMUID:C1074083-5815-4FB3-8969-C8EDC9E3903E&#13;
+UID:C1074083-5815-4FB3-8969-C8EDC9E3903E&#13;
+TRIGGER:-PT15H&#13;
+ATTACH;VALUE=URI:Basso&#13;
+ACTION:AUDIO&#13;
+END:VALARM&#13;
+</B:default-alarm-vevent-date></A:prop></A:set></A:propertyupdate>
+, responseTime=3
+[2016-06-09 21:23:55.016] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:55.016] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:55.018] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:55.019] [DEBUG] fennelapp - calendar.proppatch called
+[2016-06-09 21:23:55.020] [INFO] fennelapp - Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'fennel';
+[2016-06-09 21:23:55.021] [WARN] fennelapp - Calendar not found
+[2016-06-09 21:23:55.021] [INFO] fennelapp - proppatch default-alarm-vevent-datetime not handled yet
+info: HTTP PROPPATCH /cal/fennel/ -> 200 in 2ms statusCode=200, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav" xmlns:ical="http://apple.com/ns/ical/">
+	<d:response>
+		<d:href>/cal/fennel/</d:href>
+		<d:propstat>
+			<d:prop>
+<cal:default-alarm-vevent-datetime/>			</d:prop>
+			<d:status>HTTP/1.1 403 Forbidden</d:status>
+		</d:propstat>
+	</d:response>
+</d:multistatus>
+, url=/cal/fennel/, host=127.0.0.1:8888, content-type=text/xml, authorization=Basic ZmVubmVsOmZlbm5lbA==, connection=keep-alive, accept=*/*, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, content-length=432, accept-language=en-us, accept-encoding=gzip, deflate, method=PROPPATCH, httpVersion=1.1, originalUrl=/cal/fennel/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propertyupdate xmlns:A="DAV:"><A:set><A:prop><B:default-alarm-vevent-datetime xmlns:B="urn:ietf:params:xml:ns:caldav">BEGIN:VALARM&#13;
+X-WR-ALARMUID:6C65BC8A-4BFE-4A74-9811-2683AFC7B5C6&#13;
+UID:6C65BC8A-4BFE-4A74-9811-2683AFC7B5C6&#13;
+TRIGGER:-PT5M&#13;
+ATTACH;VALUE=URI:Basso&#13;
+ACTION:AUDIO&#13;
+END:VALARM&#13;
+</B:default-alarm-vevent-datetime></A:prop></A:set></A:propertyupdate>
+, responseTime=2
+[2016-06-09 21:23:55.038] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:55.038] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:55.044] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:55.045] [DEBUG] fennelapp - calendar.propfind called
+request.getUrlElementSize(): 5
+info: HTTP PROPFIND /cal/fennel/notifications/ -> 207 in 1ms statusCode=207, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"><d:response><d:href>/cal/fennel/notifications/</d:href></d:response></d:multistatus>, url=/cal/fennel/notifications/, host=127.0.0.1:8888, accept=*/*, brief=t, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-language=en-us, accept-encoding=gzip, deflate, content-type=text/xml, content-length=181, depth=0, connection=keep-alive, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, prefer=return=minimal, method=PROPFIND, httpVersion=1.1, originalUrl=/cal/fennel/notifications/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <C:getctag xmlns:C="http://calendarserver.org/ns/"/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+, responseTime=1
+[2016-06-09 21:23:55.049] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:55.049] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:55.051] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:55.051] [DEBUG] fennelapp - calendar.propfind called
+request.getUrlElementSize(): 5
+info: HTTP PROPFIND /cal/fennel/notifications/ -> 207 in 2ms statusCode=207, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"><d:response><d:href>/cal/fennel/notifications/</d:href></d:response></d:multistatus>, url=/cal/fennel/notifications/, host=127.0.0.1:8888, accept=*/*, brief=t, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-language=en-us, accept-encoding=gzip, deflate, content-type=text/xml, content-length=187, depth=1, connection=keep-alive, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, prefer=return=minimal, method=PROPFIND, httpVersion=1.1, originalUrl=/cal/fennel/notifications/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:getetag/>
+    <C:notificationtype xmlns:C="http://calendarserver.org/ns/"/>
+  </A:prop>
+</A:propfind>
+, responseTime=2
+[2016-06-09 21:23:55.063] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:55.063] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:55.066] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:55.067] [DEBUG] fennelapp - calendar.makeCalendar called
+CAL.findOrCreate with {
+  "where": {
+    "pkey": "9F4B0C92-C3EE-48F9-A957-6A4225936DD7"
+  },
+  "defaults": {
+    "owner": "fennel",
+    "timezone": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Apple Inc.//Mac OS X 10.11.5//EN\r\nCALSCALE:GREGORIAN\r\nBEGIN:VTIMEZONE\r\nTZID:America/Montreal\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nDTSTART:20070311T020000\r\nTZNAME:GMT-4\r\nTZOFFSETTO:-0400\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nDTSTART:20071104T020000\r\nTZNAME:GMT-5\r\nTZOFFSETTO:-0500\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nEND:VCALENDAR\r\n",
+    "order": "236",
+    "free_busy_set": "YES",
+    "supported_cal_component": "VEVENT",
+    "colour": "#0E61B9FF",
+    "displayname": "Untitled"
+  }
+}
+[2016-06-09 21:23:55.069] [INFO] fennelapp - Executing (64872643-9856-4ea0-9de3-4f8a8c0f969d): START TRANSACTION;
+[2016-06-09 21:23:55.070] [INFO] fennelapp - Executing (64872643-9856-4ea0-9de3-4f8a8c0f969d): SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+[2016-06-09 21:23:55.074] [INFO] fennelapp - Executing (64872643-9856-4ea0-9de3-4f8a8c0f969d): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '9F4B0C92-C3EE-48F9-A957-6A4225936DD7';
+[2016-06-09 21:23:55.091] [INFO] fennelapp - Executing (64872643-9856-4ea0-9de3-4f8a8c0f969d): CREATE OR REPLACE FUNCTION pg_temp.testfunc(OUT response "CALs", OUT sequelize_caught_exception text) RETURNS RECORD AS $func_ade2a043c4d144d0a5b987093a3d9827$ BEGIN INSERT INTO "CALs" ("pkey","owner","timezone","order","free_busy_set","supported_cal_component","colour","displayname","synctoken","createdAt","updatedAt") VALUES ('9F4B0C92-C3EE-48F9-A957-6A4225936DD7','fennel','BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Apple Inc.//Mac OS X 10.11.5//EN
+CALSCALE:GREGORIAN
+BEGIN:VTIMEZONE
+TZID:America/Montreal
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+DTSTART:20070311T020000
+TZNAME:GMT-4
+TZOFFSETTO:-0400
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+DTSTART:20071104T020000
+TZNAME:GMT-5
+TZOFFSETTO:-0500
+END:STANDARD
+END:VTIMEZONE
+END:VCALENDAR
+','236','YES','VEVENT','#0E61B9FF','Untitled',0,'2016-06-10 01:23:55.077 +00:00','2016-06-10 01:23:55.077 +00:00') RETURNING * INTO response; EXCEPTION WHEN unique_violation THEN GET STACKED DIAGNOSTICS sequelize_caught_exception = PG_EXCEPTION_DETAIL; END $func_ade2a043c4d144d0a5b987093a3d9827$ LANGUAGE plpgsql; SELECT (testfunc.response).*, testfunc.sequelize_caught_exception FROM pg_temp.testfunc(); DROP FUNCTION IF EXISTS pg_temp.testfunc();
+[2016-06-09 21:23:55.130] [INFO] fennelapp - Executing (64872643-9856-4ea0-9de3-4f8a8c0f969d): COMMIT;
+[2016-06-09 21:23:55.131] [DEBUG] fennelapp - Created CAL: {
+    "synctoken": 0,
+    "owner": "fennel",
+    "timezone": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Apple Inc.//Mac OS X 10.11.5//EN\r\nCALSCALE:GREGORIAN\r\nBEGIN:VTIMEZONE\r\nTZID:America/Montreal\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nDTSTART:20070311T020000\r\nTZNAME:GMT-4\r\nTZOFFSETTO:-0400\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nDTSTART:20071104T020000\r\nTZNAME:GMT-5\r\nTZOFFSETTO:-0500\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nEND:VCALENDAR\r\n",
+    "order": "236",
+    "free_busy_set": "YES",
+    "supported_cal_component": "VEVENT",
+    "colour": "#0E61B9FF",
+    "displayname": "Untitled",
+    "pkey": "9F4B0C92-C3EE-48F9-A957-6A4225936DD7",
+    "updatedAt": "2016-06-10T01:23:55.077Z",
+    "createdAt": "2016-06-10T01:23:55.077Z"
+}
+[2016-06-09 21:23:55.134] [WARN] fennelapp - cal saved
+info: HTTP MKCALENDAR /cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/ -> 201 in 68ms statusCode=201, body=Created, url=/cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/, host=127.0.0.1:8888, content-type=text/xml, authorization=Basic ZmVubmVsOmZlbm5lbA==, connection=keep-alive, accept=*/*, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, content-length=1209, accept-language=en-us, accept-encoding=gzip, deflate, method=MKCALENDAR, httpVersion=1.1, originalUrl=/cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<B:mkcalendar xmlns:B="urn:ietf:params:xml:ns:caldav">
+  <A:set xmlns:A="DAV:">
+    <A:prop>
+      <A:displayname>Untitled</A:displayname>
+      <B:calendar-free-busy-set>
+        <YES/>
+      </B:calendar-free-busy-set>
+      <D:calendar-color xmlns:D="http://apple.com/ns/ical/" symbolic-color="blue">#0E61B9FF</D:calendar-color>
+      <D:calendar-order xmlns:D="http://apple.com/ns/ical/">236</D:calendar-order>
+      <B:calendar-timezone>BEGIN:VCALENDAR&#13;
+VERSION:2.0&#13;
+PRODID:-//Apple Inc.//Mac OS X 10.11.5//EN&#13;
+CALSCALE:GREGORIAN&#13;
+BEGIN:VTIMEZONE&#13;
+TZID:America/Montreal&#13;
+BEGIN:DAYLIGHT&#13;
+TZOFFSETFROM:-0500&#13;
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU&#13;
+DTSTART:20070311T020000&#13;
+TZNAME:GMT-4&#13;
+TZOFFSETTO:-0400&#13;
+END:DAYLIGHT&#13;
+BEGIN:STANDARD&#13;
+TZOFFSETFROM:-0400&#13;
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU&#13;
+DTSTART:20071104T020000&#13;
+TZNAME:GMT-5&#13;
+TZOFFSETTO:-0500&#13;
+END:STANDARD&#13;
+END:VTIMEZONE&#13;
+END:VCALENDAR&#13;
+</B:calendar-timezone>
+      <B:supported-calendar-component-set>
+        <B:comp name="VEVENT"/>
+      </B:supported-calendar-component-set>
+    </A:prop>
+  </A:set>
+</B:mkcalendar>
+, responseTime=68
+[2016-06-09 21:23:55.137] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:55.137] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:55.140] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:55.141] [DEBUG] fennelapp - calendar.makeCalendar called
+CAL.findOrCreate with {
+  "where": {
+    "pkey": "9F4B0C92-C3EE-48F9-A957-6A4225936DD7"
+  },
+  "defaults": {
+    "owner": "fennel",
+    "timezone": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Apple Inc.//Mac OS X 10.11.5//EN\r\nCALSCALE:GREGORIAN\r\nBEGIN:VTIMEZONE\r\nTZID:America/Montreal\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nDTSTART:20070311T020000\r\nTZNAME:GMT-4\r\nTZOFFSETTO:-0400\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nDTSTART:20071104T020000\r\nTZNAME:GMT-5\r\nTZOFFSETTO:-0500\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nEND:VCALENDAR\r\n",
+    "order": "236",
+    "free_busy_set": "YES",
+    "supported_cal_component": "VEVENT",
+    "colour": "#0E61B9FF",
+    "displayname": "Untitled"
+  }
+}
+[2016-06-09 21:23:55.142] [INFO] fennelapp - Executing (9a21a933-06b1-4eb7-bfbc-6eabc2dd971f): START TRANSACTION;
+[2016-06-09 21:23:55.142] [INFO] fennelapp - Executing (9a21a933-06b1-4eb7-bfbc-6eabc2dd971f): SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+[2016-06-09 21:23:55.145] [INFO] fennelapp - Executing (9a21a933-06b1-4eb7-bfbc-6eabc2dd971f): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '9F4B0C92-C3EE-48F9-A957-6A4225936DD7';
+[2016-06-09 21:23:55.147] [INFO] fennelapp - Executing (9a21a933-06b1-4eb7-bfbc-6eabc2dd971f): COMMIT;
+[2016-06-09 21:23:55.147] [DEBUG] fennelapp - Loaded CAL: {
+    "pkey": "9F4B0C92-C3EE-48F9-A957-6A4225936DD7",
+    "owner": "fennel",
+    "timezone": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Apple Inc.//Mac OS X 10.11.5//EN\r\nCALSCALE:GREGORIAN\r\nBEGIN:VTIMEZONE\r\nTZID:America/Montreal\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nDTSTART:20070311T020000\r\nTZNAME:GMT-4\r\nTZOFFSETTO:-0400\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nDTSTART:20071104T020000\r\nTZNAME:GMT-5\r\nTZOFFSETTO:-0500\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nEND:VCALENDAR\r\n",
+    "order": "236",
+    "free_busy_set": "YES",
+    "supported_cal_component": "VEVENT",
+    "colour": "#0E61B9FF",
+    "displayname": "Untitled",
+    "synctoken": 0,
+    "createdAt": "2016-06-10T01:23:55.077Z",
+    "updatedAt": "2016-06-10T01:23:55.077Z"
+}
+[2016-06-09 21:23:55.148] [WARN] fennelapp - cal saved
+info: HTTP MKCALENDAR /cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/ -> 201 in 8ms statusCode=201, body=Created, url=/cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/, host=127.0.0.1:8888, content-type=text/xml, authorization=Basic ZmVubmVsOmZlbm5lbA==, connection=keep-alive, accept=*/*, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, content-length=1209, accept-language=en-us, accept-encoding=gzip, deflate, method=MKCALENDAR, httpVersion=1.1, originalUrl=/cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<B:mkcalendar xmlns:B="urn:ietf:params:xml:ns:caldav">
+  <A:set xmlns:A="DAV:">
+    <A:prop>
+      <A:displayname>Untitled</A:displayname>
+      <B:calendar-free-busy-set>
+        <YES/>
+      </B:calendar-free-busy-set>
+      <D:calendar-color xmlns:D="http://apple.com/ns/ical/" symbolic-color="blue">#0E61B9FF</D:calendar-color>
+      <D:calendar-order xmlns:D="http://apple.com/ns/ical/">236</D:calendar-order>
+      <B:calendar-timezone>BEGIN:VCALENDAR&#13;
+VERSION:2.0&#13;
+PRODID:-//Apple Inc.//Mac OS X 10.11.5//EN&#13;
+CALSCALE:GREGORIAN&#13;
+BEGIN:VTIMEZONE&#13;
+TZID:America/Montreal&#13;
+BEGIN:DAYLIGHT&#13;
+TZOFFSETFROM:-0500&#13;
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU&#13;
+DTSTART:20070311T020000&#13;
+TZNAME:GMT-4&#13;
+TZOFFSETTO:-0400&#13;
+END:DAYLIGHT&#13;
+BEGIN:STANDARD&#13;
+TZOFFSETFROM:-0400&#13;
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU&#13;
+DTSTART:20071104T020000&#13;
+TZNAME:GMT-5&#13;
+TZOFFSETTO:-0500&#13;
+END:STANDARD&#13;
+END:VTIMEZONE&#13;
+END:VCALENDAR&#13;
+</B:calendar-timezone>
+      <B:supported-calendar-component-set>
+        <B:comp name="VEVENT"/>
+      </B:supported-calendar-component-set>
+    </A:prop>
+  </A:set>
+</B:mkcalendar>
+, responseTime=8

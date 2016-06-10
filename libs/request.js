@@ -24,15 +24,6 @@ function request(req, res)
     this.req = req;
     this.res = res;
     
-    // this.res.writeHead = function(status){
-    //     this.responseStatus = status;
-    // }.bind( this );
-    
-    this.response = "";
-    this.res.write = function(data){
-        this.response += data;
-    }.bind( this );
-
     var header = req.headers['authorization']||'';        // get the header
     var token = header.split(/\s+/).pop()||'';            // and the encoded auth token
     var auth = new Buffer(token, 'base64').toString();    // convert from base64
@@ -41,38 +32,8 @@ function request(req, res)
 
     this.user = new userLib.user(username);
 
-    this.closeResAutomatically = true;
-
     return this;
 }
-
-request.prototype.dontCloseResAutomatically = function()
-{
-    this.closeResAutomatically = false;
-};
-
-request.prototype.closeResponseAutomatically = function()
-{
-    if(this.closeResAutomatically)
-    {
-        this.closeRes();
-    }
-};
-
-request.prototype.closeRes = function()
-{
-    // Format output for log
-    this.response = xml.parseXml( this.response ).toString();
-    if(this.responseStatus != null) {
-        console.log("Returning status: " + this.responseStatus);
-        this.res.status( this.responseStatus );
-    }
-    console.log("Returning response: " + this.response);
-    this.res.write(this.response);
-    this.res.end();
-    // this.res.end();
-};
-
 
 request.prototype.getUser = function()
 {

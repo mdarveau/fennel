@@ -1,0 +1,235 @@
+[2016-06-09 21:23:22.853] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:22.853] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:22.857] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:22.874] [DEBUG] fennelapp - Called the root. Redirecting to /p/
+info: HTTP PROPFIND / -> 302 in 1ms statusCode=302, url=/, host=127.0.0.1:8888, accept=*/*, brief=t, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-language=en-us, accept-encoding=gzip, deflate, content-type=text/xml, content-length=127, depth=0, connection=keep-alive, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, prefer=return=minimal, method=PROPFIND, httpVersion=1.1, originalUrl=/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:principal-URL/>
+  </A:prop>
+</A:propfind>
+, responseTime=1
+[2016-06-09 21:23:22.879] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:22.879] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:22.883] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:22.885] [DEBUG] fennelapp - principal.propfind called
+info: HTTP PROPFIND /p/ -> 207 in 3ms statusCode=207, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"><d:response><d:propstat><d:prop><d:principal-URL><d:href>/p/fennel/</d:href></d:principal-URL>
+</d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>, url=/p/, host=127.0.0.1:8888, accept=*/*, brief=t, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-language=en-us, accept-encoding=gzip, deflate, content-type=text/xml, content-length=127, depth=0, connection=keep-alive, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, prefer=return=minimal, method=PROPFIND, httpVersion=1.1, originalUrl=/p/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:principal-URL/>
+  </A:prop>
+</A:propfind>
+, responseTime=3
+[2016-06-09 21:23:23.122] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:23.123] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:23.127] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:23.128] [DEBUG] fennelapp - Called the root. Redirecting to /p/
+info: HTTP PROPFIND / -> 302 in 1ms statusCode=302, url=/, host=127.0.0.1:8888, accept=*/*, brief=t, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-language=en-us, accept-encoding=gzip, deflate, content-type=text/xml, content-length=743, depth=0, connection=keep-alive, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, prefer=return=minimal, method=PROPFIND, httpVersion=1.1, originalUrl=/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <B:calendar-home-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:calendar-user-address-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:current-user-principal/>
+    <A:displayname/>
+    <C:dropbox-home-URL xmlns:C="http://calendarserver.org/ns/"/>
+    <C:email-address-set xmlns:C="http://calendarserver.org/ns/"/>
+    <C:notification-URL xmlns:C="http://calendarserver.org/ns/"/>
+    <A:principal-collection-set/>
+    <A:principal-URL/>
+    <A:resource-id/>
+    <B:schedule-inbox-URL xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:schedule-outbox-URL xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:supported-report-set/>
+  </A:prop>
+</A:propfind>
+, responseTime=1
+[2016-06-09 21:23:23.129] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:23.130] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:23.133] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:23.134] [DEBUG] fennelapp - principal.propfind called
+[2016-06-09 21:23:23.135] [WARN] fennelapp - P-PF: not handled: dropbox-home-URL
+[2016-06-09 21:23:23.135] [WARN] fennelapp - P-PF: not handled: schedule-inbox-URL
+info: HTTP PROPFIND /p/ -> 207 in 1ms statusCode=207, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"><d:response><d:propstat><d:prop><cal:calendar-home-set><d:href>/cal/fennel</d:href></cal:calendar-home-set>        <cal:calendar-user-address-set>
+        	<d:href>mailto:lord test at swordlord.com</d:href>
+        	<d:href>/p/fennel/</d:href>
+        </cal:calendar-user-address-set>
+<d:current-user-principal><d:href>/p/fennel/</d:href></d:current-user-principal><d:displayname>fennel</d:displayname><cs:notification-URL><d:href>/cal/fennel/notifications/</d:href></cs:notification-URL><d:principal-collection-set><d:href>/p/</d:href></d:principal-collection-set><d:principal-URL><d:href>/p/fennel/</d:href></d:principal-URL>
+<cal:schedule-outbox-URL><d:href>/cal/fennel/outbox</d:href></cal:schedule-outbox-URL>        <d:supported-report-set>
+        	<d:supported-report>
+        		<d:report>
+        			<d:expand-property/>
+        		</d:report>
+        	</d:supported-report>
+        	<d:supported-report>
+        		<d:report>
+        			<d:principal-property-search/>
+        		</d:report>
+        	</d:supported-report>
+        	<d:supported-report>
+        		<d:report>
+        			<d:principal-search-property-set/>
+        		</d:report>
+        	</d:supported-report>
+        </d:supported-report-set>
+</d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>, url=/p/, host=127.0.0.1:8888, accept=*/*, brief=t, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-language=en-us, accept-encoding=gzip, deflate, content-type=text/xml, content-length=743, depth=0, connection=keep-alive, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, prefer=return=minimal, method=PROPFIND, httpVersion=1.1, originalUrl=/p/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <B:calendar-home-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:calendar-user-address-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:current-user-principal/>
+    <A:displayname/>
+    <C:dropbox-home-URL xmlns:C="http://calendarserver.org/ns/"/>
+    <C:email-address-set xmlns:C="http://calendarserver.org/ns/"/>
+    <C:notification-URL xmlns:C="http://calendarserver.org/ns/"/>
+    <A:principal-collection-set/>
+    <A:principal-URL/>
+    <A:resource-id/>
+    <B:schedule-inbox-URL xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:schedule-outbox-URL xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:supported-report-set/>
+  </A:prop>
+</A:propfind>
+, responseTime=1
+[2016-06-09 21:23:23.140] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:23.140] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:23.144] [INFO] fennelapp - User logged in: fennel
+info: HTTP OPTIONS / -> 200 in 2ms statusCode=200, body=GET,HEAD,PROPFIND, url=/, host=127.0.0.1:8888, content-length=0, connection=keep-alive, accept=*/*, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, accept-language=en-us, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-encoding=gzip, deflate, method=OPTIONS, httpVersion=1.1, originalUrl=/, , , responseTime=2
+[2016-06-09 21:23:23.548] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:23.548] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:23.552] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:23.553] [DEBUG] fennelapp - calendar.propfind called
+request.getUrlElementSize(): 4
+[2016-06-09 21:23:23.570] [INFO] fennelapp - Executing (default): SELECT count(*) AS "count" FROM "CALs" AS "CAL" WHERE "CAL"."owner" = 'fennel';
+info: HTTP PROPFIND /cal/fennel/ -> 207 in 21ms statusCode=207, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"><d:response><d:href>/cal/fennel/</d:href><d:propstat><d:prop><d:current-user-privilege-set><d:privilege xmlns:d="DAV:"><cal:read-free-busy/></d:privilege><d:privilege xmlns:d="DAV:"><d:write/></d:privilege><d:privilege xmlns:d="DAV:"><d:write-acl/></d:privilege><d:privilege xmlns:d="DAV:"><d:write-content/></d:privilege><d:privilege xmlns:d="DAV:"><d:write-properties/></d:privilege><d:privilege xmlns:d="DAV:"><d:bind/></d:privilege><d:privilege xmlns:d="DAV:"><d:unbind/></d:privilege><d:privilege xmlns:d="DAV:"><d:unlock/></d:privilege><d:privilege xmlns:d="DAV:"><d:read/></d:privilege><d:privilege xmlns:d="DAV:"><d:read-acl/></d:privilege><d:privilege xmlns:d="DAV:"><d:read-current-user-privilege-set/></d:privilege></d:current-user-privilege-set><d:owner><d:href>/p/fennel/</d:href></d:owner><d:resourcetype><d:collection/></d:resourcetype><d:supported-report-set><d:supported-report><d:report><d:sync-collection/></d:report></d:supported-report><d:supported-report><d:report><d:expand-property/></d:report></d:supported-report><d:supported-report><d:report><d:principal-property-search/></d:report></d:supported-report><d:supported-report><d:report><d:principal-search-property-set/></d:report></d:supported-report></d:supported-report-set></d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response><d:response>   <d:href>/cal/fennel/outbox/</d:href>    <d:propstat>        <d:prop>            <d:current-user-privilege-set>               <d:privilege xmlns:d="DAV:">                   <d:read/>               </d:privilege>               <d:privilege xmlns:d="DAV:">                   <d:read-acl/>               </d:privilege>               <d:privilege xmlns:d="DAV:">                   <d:read-current-user-privilege-set/>               </d:privilege>               <d:privilege xmlns:d="DAV:">                   <d:schedule-post-vevent xmlns:d="urn:ietf:params:xml:ns:caldav"/>               </d:privilege>               <d:privilege xmlns:d="DAV:">                   <d:schedule-query-freebusy xmlns:d="urn:ietf:params:xml:ns:caldav"/>               </d:privilege>           </d:current-user-privilege-set>           <d:owner>               <d:href>/p/fennel/</d:href>           </d:owner>           <d:resourcetype>              <d:collection/>               <cal:schedule-outbox/>           </d:resourcetype>           <d:supported-report-set>              <d:supported-report>                   <d:report>                       <d:expand-property/>                   </d:report>               </d:supported-report>               <d:supported-report>                   <d:report>                       <d:principal-property-search/>                   </d:report>               </d:supported-report>               <d:supported-report>                    <d:report>                       <d:principal-search-property-set/>                   </d:report>               </d:supported-report>            </d:supported-report-set>       </d:prop>       <d:status>HTTP/1.1 200 OK</d:status>   </d:propstat></d:response><d:response><d:href>/cal/fennel/notifications/</d:href><d:propstat>    <d:prop>        <d:current-user-privilege-set>            <d:privilege xmlns:d="DAV:">                <d:write/>           </d:privilege>           <d:privilege xmlns:d="DAV:">               <d:write-acl/>           </d:privilege>           <d:privilege xmlns:d="DAV:">               <d:write-properties/>          </d:privilege>           <d:privilege xmlns:d="DAV:">               <d:write-content/>           </d:privilege>            <d:privilege xmlns:d="DAV:">               <d:bind/>            </d:privilege>            <d:privilege xmlns:d="DAV:">                <d:unbind/>            </d:privilege>            <d:privilege xmlns:d="DAV:">                <d:unlock/>           </d:privilege>           <d:privilege xmlns:d="DAV:">               <d:read/>           </d:privilege>           <d:privilege xmlns:d="DAV:">                <d:read-acl/>           </d:privilege>           <d:privilege xmlns:d="DAV:">               <d:read-current-user-privilege-set/>            </d:privilege>       </d:current-user-privilege-set>       <d:owner>           <d:href>/p/fennel/</d:href>       </d:owner>       <d:resourcetype>           <d:collection/>           <cs:notification/>       </d:resourcetype>       <d:supported-report-set>           <d:supported-report>               <d:report>                   <d:expand-property/>               </d:report>           </d:supported-report>           <d:supported-report>               <d:report>                   <d:principal-property-search/>               </d:report>           </d:supported-report>          <d:supported-report>               <d:report>                  <d:principal-search-property-set/>              </d:report>           </d:supported-report>       </d:supported-report-set>   </d:prop><d:status>HTTP/1.1 200 OK</d:status></d:propstat></d:response></d:multistatus>, url=/cal/fennel/, host=127.0.0.1:8888, accept=*/*, brief=t, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-language=en-us, accept-encoding=gzip, deflate, content-type=text/xml, content-length=2217, depth=1, connection=keep-alive, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, prefer=return=minimal, method=PROPFIND, httpVersion=1.1, originalUrl=/cal/fennel/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:add-member/>
+    <C:allowed-sharing-modes xmlns:C="http://calendarserver.org/ns/"/>
+    <D:autoprovisioned xmlns:D="http://apple.com/ns/ical/"/>
+    <E:bulk-requests xmlns:E="http://me.com/_namespace/"/>
+    <B:calendar-alarm xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <D:calendar-color xmlns:D="http://apple.com/ns/ical/"/>
+    <B:calendar-description xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:calendar-free-busy-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <D:calendar-order xmlns:D="http://apple.com/ns/ical/"/>
+    <B:calendar-timezone xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:current-user-privilege-set/>
+    <B:default-alarm-vevent-date xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:default-alarm-vevent-datetime xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:displayname/>
+    <C:getctag xmlns:C="http://calendarserver.org/ns/"/>
+    <C:invite xmlns:C="http://calendarserver.org/ns/"/>
+    <D:language-code xmlns:D="http://apple.com/ns/ical/"/>
+    <D:location-code xmlns:D="http://apple.com/ns/ical/"/>
+    <A:owner/>
+    <C:pre-publish-url xmlns:C="http://calendarserver.org/ns/"/>
+    <C:publish-url xmlns:C="http://calendarserver.org/ns/"/>
+    <C:push-transports xmlns:C="http://calendarserver.org/ns/"/>
+    <C:pushkey xmlns:C="http://calendarserver.org/ns/"/>
+    <A:quota-available-bytes/>
+    <A:quota-used-bytes/>
+    <D:refreshrate xmlns:D="http://apple.com/ns/ical/"/>
+    <A:resource-id/>
+    <A:resourcetype/>
+    <B:schedule-calendar-transp xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:schedule-default-calendar-URL xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <C:source xmlns:C="http://calendarserver.org/ns/"/>
+    <C:subscribed-strip-alarms xmlns:C="http://calendarserver.org/ns/"/>
+    <C:subscribed-strip-attachments xmlns:C="http://calendarserver.org/ns/"/>
+    <C:subscribed-strip-todos xmlns:C="http://calendarserver.org/ns/"/>
+    <B:supported-calendar-component-set xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <B:supported-calendar-component-sets xmlns:B="urn:ietf:params:xml:ns:caldav"/>
+    <A:supported-report-set/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+, responseTime=21
+[2016-06-09 21:23:23.578] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:23.579] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:23.582] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:23.583] [DEBUG] fennelapp - calendar.proppatch called
+[2016-06-09 21:23:23.587] [INFO] fennelapp - Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'fennel';
+[2016-06-09 21:23:23.589] [WARN] fennelapp - Calendar not found
+[2016-06-09 21:23:23.590] [INFO] fennelapp - proppatch default-alarm-vevent-date not handled yet
+info: HTTP PROPPATCH /cal/fennel/ -> 200 in 8ms statusCode=200, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav" xmlns:ical="http://apple.com/ns/ical/">
+	<d:response>
+		<d:href>/cal/fennel/</d:href>
+		<d:propstat>
+			<d:prop>
+<cal:default-alarm-vevent-date/>			</d:prop>
+			<d:status>HTTP/1.1 403 Forbidden</d:status>
+		</d:propstat>
+	</d:response>
+</d:multistatus>
+, url=/cal/fennel/, host=127.0.0.1:8888, content-type=text/xml, authorization=Basic ZmVubmVsOmZlbm5lbA==, connection=keep-alive, accept=*/*, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, content-length=425, accept-language=en-us, accept-encoding=gzip, deflate, method=PROPPATCH, httpVersion=1.1, originalUrl=/cal/fennel/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propertyupdate xmlns:A="DAV:"><A:set><A:prop><B:default-alarm-vevent-date xmlns:B="urn:ietf:params:xml:ns:caldav">BEGIN:VALARM&#13;
+X-WR-ALARMUID:C1074083-5815-4FB3-8969-C8EDC9E3903E&#13;
+UID:C1074083-5815-4FB3-8969-C8EDC9E3903E&#13;
+TRIGGER:-PT15H&#13;
+ATTACH;VALUE=URI:Basso&#13;
+ACTION:AUDIO&#13;
+END:VALARM&#13;
+</B:default-alarm-vevent-date></A:prop></A:set></A:propertyupdate>
+, responseTime=8
+[2016-06-09 21:23:23.593] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:23.593] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:23.597] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:23.598] [DEBUG] fennelapp - calendar.proppatch called
+[2016-06-09 21:23:23.600] [INFO] fennelapp - Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'fennel';
+[2016-06-09 21:23:23.601] [WARN] fennelapp - Calendar not found
+[2016-06-09 21:23:23.601] [INFO] fennelapp - proppatch default-alarm-vevent-datetime not handled yet
+info: HTTP PROPPATCH /cal/fennel/ -> 200 in 3ms statusCode=200, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav" xmlns:ical="http://apple.com/ns/ical/">
+	<d:response>
+		<d:href>/cal/fennel/</d:href>
+		<d:propstat>
+			<d:prop>
+<cal:default-alarm-vevent-datetime/>			</d:prop>
+			<d:status>HTTP/1.1 403 Forbidden</d:status>
+		</d:propstat>
+	</d:response>
+</d:multistatus>
+, url=/cal/fennel/, host=127.0.0.1:8888, content-type=text/xml, authorization=Basic ZmVubmVsOmZlbm5lbA==, connection=keep-alive, accept=*/*, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, content-length=432, accept-language=en-us, accept-encoding=gzip, deflate, method=PROPPATCH, httpVersion=1.1, originalUrl=/cal/fennel/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propertyupdate xmlns:A="DAV:"><A:set><A:prop><B:default-alarm-vevent-datetime xmlns:B="urn:ietf:params:xml:ns:caldav">BEGIN:VALARM&#13;
+X-WR-ALARMUID:6C65BC8A-4BFE-4A74-9811-2683AFC7B5C6&#13;
+UID:6C65BC8A-4BFE-4A74-9811-2683AFC7B5C6&#13;
+TRIGGER:-PT5M&#13;
+ATTACH;VALUE=URI:Basso&#13;
+ACTION:AUDIO&#13;
+END:VALARM&#13;
+</B:default-alarm-vevent-datetime></A:prop></A:set></A:propertyupdate>
+, responseTime=3
+[2016-06-09 21:23:23.656] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:23.656] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:23.700] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:23.717] [DEBUG] fennelapp - calendar.propfind called
+request.getUrlElementSize(): 5
+info: HTTP PROPFIND /cal/fennel/notifications/ -> 207 in 19ms statusCode=207, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"><d:response><d:href>/cal/fennel/notifications/</d:href></d:response></d:multistatus>, url=/cal/fennel/notifications/, host=127.0.0.1:8888, accept=*/*, brief=t, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-language=en-us, accept-encoding=gzip, deflate, content-type=text/xml, content-length=181, depth=0, connection=keep-alive, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, prefer=return=minimal, method=PROPFIND, httpVersion=1.1, originalUrl=/cal/fennel/notifications/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <C:getctag xmlns:C="http://calendarserver.org/ns/"/>
+    <A:sync-token/>
+  </A:prop>
+</A:propfind>
+, responseTime=19
+[2016-06-09 21:23:23.749] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:23:23.750] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:23:23.753] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:23:23.754] [DEBUG] fennelapp - calendar.propfind called
+request.getUrlElementSize(): 5
+info: HTTP PROPFIND /cal/fennel/notifications/ -> 207 in 1ms statusCode=207, body=<?xml version="1.0" encoding="utf-8"?>
+<d:multistatus xmlns:d="DAV:" xmlns:cal="urn:ietf:params:xml:ns:caldav" xmlns:cs="http://calendarserver.org/ns/" xmlns:card="urn:ietf:params:xml:ns:carddav"><d:response><d:href>/cal/fennel/notifications/</d:href></d:response></d:multistatus>, url=/cal/fennel/notifications/, host=127.0.0.1:8888, accept=*/*, brief=t, authorization=Basic ZmVubmVsOmZlbm5lbA==, accept-language=en-us, accept-encoding=gzip, deflate, content-type=text/xml, content-length=187, depth=1, connection=keep-alive, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, prefer=return=minimal, method=PROPFIND, httpVersion=1.1, originalUrl=/cal/fennel/notifications/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<A:propfind xmlns:A="DAV:">
+  <A:prop>
+    <A:getetag/>
+    <C:notificationtype xmlns:C="http://calendarserver.org/ns/"/>
+  </A:prop>
+</A:propfind>
+, responseTime=1
+

@@ -126,7 +126,6 @@ var setupHandlerRoute = function( handler, method ){
     return function ( req, res ) {
         var request = new reqlib.request( req, res );
         handler[method]( request );
-        request.closeResponseAutomatically();
     }
 };
 var setupHandlerRoutes = function( handler, handlerPath ){

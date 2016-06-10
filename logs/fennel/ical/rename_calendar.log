@@ -1,0 +1,153 @@
+[2016-06-09 21:24:36.746] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:24:36.746] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:24:36.748] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:24:36.749] [DEBUG] fennelapp - calendar.makeCalendar called
+CAL.findOrCreate with {
+  "where": {
+    "pkey": "9F4B0C92-C3EE-48F9-A957-6A4225936DD7"
+  },
+  "defaults": {
+    "owner": "fennel",
+    "timezone": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Apple Inc.//Mac OS X 10.11.5//EN\r\nCALSCALE:GREGORIAN\r\nBEGIN:VTIMEZONE\r\nTZID:America/Montreal\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nDTSTART:20070311T020000\r\nTZNAME:GMT-4\r\nTZOFFSETTO:-0400\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nDTSTART:20071104T020000\r\nTZNAME:GMT-5\r\nTZOFFSETTO:-0500\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nEND:VCALENDAR\r\n",
+    "order": "236",
+    "free_busy_set": "YES",
+    "supported_cal_component": "VEVENT",
+    "colour": "#0E61B9FF",
+    "displayname": "Untitled"
+  }
+}
+[2016-06-09 21:24:36.756] [INFO] fennelapp - Executing (b68640e8-c5f2-44d2-b20a-fa635f2ebae5): START TRANSACTION;
+[2016-06-09 21:24:36.757] [INFO] fennelapp - Executing (b68640e8-c5f2-44d2-b20a-fa635f2ebae5): SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+[2016-06-09 21:24:36.759] [INFO] fennelapp - Executing (b68640e8-c5f2-44d2-b20a-fa635f2ebae5): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '9F4B0C92-C3EE-48F9-A957-6A4225936DD7';
+[2016-06-09 21:24:36.762] [INFO] fennelapp - Executing (b68640e8-c5f2-44d2-b20a-fa635f2ebae5): COMMIT;
+[2016-06-09 21:24:36.763] [DEBUG] fennelapp - Loaded CAL: {
+    "pkey": "9F4B0C92-C3EE-48F9-A957-6A4225936DD7",
+    "owner": "fennel",
+    "timezone": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Apple Inc.//Mac OS X 10.11.5//EN\r\nCALSCALE:GREGORIAN\r\nBEGIN:VTIMEZONE\r\nTZID:America/Montreal\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nDTSTART:20070311T020000\r\nTZNAME:GMT-4\r\nTZOFFSETTO:-0400\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nDTSTART:20071104T020000\r\nTZNAME:GMT-5\r\nTZOFFSETTO:-0500\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nEND:VCALENDAR\r\n",
+    "order": "236",
+    "free_busy_set": "YES",
+    "supported_cal_component": "VEVENT",
+    "colour": "#0E61B9FF",
+    "displayname": "Untitled",
+    "synctoken": 0,
+    "createdAt": "2016-06-10T01:23:55.077Z",
+    "updatedAt": "2016-06-10T01:23:55.077Z"
+}
+[2016-06-09 21:24:36.764] [WARN] fennelapp - cal saved
+info: HTTP MKCALENDAR /cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/ -> 201 in 15ms statusCode=201, body=Created, url=/cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/, host=127.0.0.1:8888, content-type=text/xml, authorization=Basic ZmVubmVsOmZlbm5lbA==, connection=keep-alive, accept=*/*, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, content-length=1209, accept-language=en-us, accept-encoding=gzip, deflate, method=MKCALENDAR, httpVersion=1.1, originalUrl=/cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<B:mkcalendar xmlns:B="urn:ietf:params:xml:ns:caldav">
+  <A:set xmlns:A="DAV:">
+    <A:prop>
+      <A:displayname>Untitled</A:displayname>
+      <B:calendar-free-busy-set>
+        <YES/>
+      </B:calendar-free-busy-set>
+      <D:calendar-color xmlns:D="http://apple.com/ns/ical/" symbolic-color="blue">#0E61B9FF</D:calendar-color>
+      <D:calendar-order xmlns:D="http://apple.com/ns/ical/">236</D:calendar-order>
+      <B:calendar-timezone>BEGIN:VCALENDAR&#13;
+VERSION:2.0&#13;
+PRODID:-//Apple Inc.//Mac OS X 10.11.5//EN&#13;
+CALSCALE:GREGORIAN&#13;
+BEGIN:VTIMEZONE&#13;
+TZID:America/Montreal&#13;
+BEGIN:DAYLIGHT&#13;
+TZOFFSETFROM:-0500&#13;
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU&#13;
+DTSTART:20070311T020000&#13;
+TZNAME:GMT-4&#13;
+TZOFFSETTO:-0400&#13;
+END:DAYLIGHT&#13;
+BEGIN:STANDARD&#13;
+TZOFFSETFROM:-0400&#13;
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU&#13;
+DTSTART:20071104T020000&#13;
+TZNAME:GMT-5&#13;
+TZOFFSETTO:-0500&#13;
+END:STANDARD&#13;
+END:VTIMEZONE&#13;
+END:VCALENDAR&#13;
+</B:calendar-timezone>
+      <B:supported-calendar-component-set>
+        <B:comp name="VEVENT"/>
+      </B:supported-calendar-component-set>
+    </A:prop>
+  </A:set>
+</B:mkcalendar>
+, responseTime=15
+[2016-06-09 21:24:36.767] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-09 21:24:36.767] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-09 21:24:36.769] [INFO] fennelapp - User logged in: fennel
+[2016-06-09 21:24:36.770] [DEBUG] fennelapp - calendar.makeCalendar called
+CAL.findOrCreate with {
+  "where": {
+    "pkey": "9F4B0C92-C3EE-48F9-A957-6A4225936DD7"
+  },
+  "defaults": {
+    "owner": "fennel",
+    "timezone": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Apple Inc.//Mac OS X 10.11.5//EN\r\nCALSCALE:GREGORIAN\r\nBEGIN:VTIMEZONE\r\nTZID:America/Montreal\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nDTSTART:20070311T020000\r\nTZNAME:GMT-4\r\nTZOFFSETTO:-0400\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nDTSTART:20071104T020000\r\nTZNAME:GMT-5\r\nTZOFFSETTO:-0500\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nEND:VCALENDAR\r\n",
+    "order": "236",
+    "free_busy_set": "YES",
+    "supported_cal_component": "VEVENT",
+    "colour": "#0E61B9FF",
+    "displayname": "Untitled"
+  }
+}
+[2016-06-09 21:24:36.770] [INFO] fennelapp - Executing (69853f7b-47ad-4fd3-884e-6a63fdcc930a): START TRANSACTION;
+[2016-06-09 21:24:36.771] [INFO] fennelapp - Executing (69853f7b-47ad-4fd3-884e-6a63fdcc930a): SET SESSION TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+[2016-06-09 21:24:36.773] [INFO] fennelapp - Executing (69853f7b-47ad-4fd3-884e-6a63fdcc930a): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '9F4B0C92-C3EE-48F9-A957-6A4225936DD7';
+[2016-06-09 21:24:36.774] [INFO] fennelapp - Executing (69853f7b-47ad-4fd3-884e-6a63fdcc930a): COMMIT;
+[2016-06-09 21:24:36.775] [DEBUG] fennelapp - Loaded CAL: {
+    "pkey": "9F4B0C92-C3EE-48F9-A957-6A4225936DD7",
+    "owner": "fennel",
+    "timezone": "BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Apple Inc.//Mac OS X 10.11.5//EN\r\nCALSCALE:GREGORIAN\r\nBEGIN:VTIMEZONE\r\nTZID:America/Montreal\r\nBEGIN:DAYLIGHT\r\nTZOFFSETFROM:-0500\r\nRRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU\r\nDTSTART:20070311T020000\r\nTZNAME:GMT-4\r\nTZOFFSETTO:-0400\r\nEND:DAYLIGHT\r\nBEGIN:STANDARD\r\nTZOFFSETFROM:-0400\r\nRRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU\r\nDTSTART:20071104T020000\r\nTZNAME:GMT-5\r\nTZOFFSETTO:-0500\r\nEND:STANDARD\r\nEND:VTIMEZONE\r\nEND:VCALENDAR\r\n",
+    "order": "236",
+    "free_busy_set": "YES",
+    "supported_cal_component": "VEVENT",
+    "colour": "#0E61B9FF",
+    "displayname": "Untitled",
+    "synctoken": 0,
+    "createdAt": "2016-06-10T01:23:55.077Z",
+    "updatedAt": "2016-06-10T01:23:55.077Z"
+}
+[2016-06-09 21:24:36.776] [WARN] fennelapp - cal saved
+info: HTTP MKCALENDAR /cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/ -> 201 in 7ms statusCode=201, body=Created, url=/cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/, host=127.0.0.1:8888, content-type=text/xml, authorization=Basic ZmVubmVsOmZlbm5lbA==, connection=keep-alive, accept=*/*, user-agent=Mac+OS+X/10.11.5 (15F34) CalendarAgent/361.2, content-length=1209, accept-language=en-us, accept-encoding=gzip, deflate, method=MKCALENDAR, httpVersion=1.1, originalUrl=/cal/fennel/9F4B0C92-C3EE-48F9-A957-6A4225936DD7/, , body=<?xml version="1.0" encoding="UTF-8"?>
+<B:mkcalendar xmlns:B="urn:ietf:params:xml:ns:caldav">
+  <A:set xmlns:A="DAV:">
+    <A:prop>
+      <A:displayname>Untitled</A:displayname>
+      <B:calendar-free-busy-set>
+        <YES/>
+      </B:calendar-free-busy-set>
+      <D:calendar-color xmlns:D="http://apple.com/ns/ical/" symbolic-color="blue">#0E61B9FF</D:calendar-color>
+      <D:calendar-order xmlns:D="http://apple.com/ns/ical/">236</D:calendar-order>
+      <B:calendar-timezone>BEGIN:VCALENDAR&#13;
+VERSION:2.0&#13;
+PRODID:-//Apple Inc.//Mac OS X 10.11.5//EN&#13;
+CALSCALE:GREGORIAN&#13;
+BEGIN:VTIMEZONE&#13;
+TZID:America/Montreal&#13;
+BEGIN:DAYLIGHT&#13;
+TZOFFSETFROM:-0500&#13;
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU&#13;
+DTSTART:20070311T020000&#13;
+TZNAME:GMT-4&#13;
+TZOFFSETTO:-0400&#13;
+END:DAYLIGHT&#13;
+BEGIN:STANDARD&#13;
+TZOFFSETFROM:-0400&#13;
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU&#13;
+DTSTART:20071104T020000&#13;
+TZNAME:GMT-5&#13;
+TZOFFSETTO:-0500&#13;
+END:STANDARD&#13;
+END:VTIMEZONE&#13;
+END:VCALENDAR&#13;
+</B:calendar-timezone>
+      <B:supported-calendar-component-set>
+        <B:comp name="VEVENT"/>
+      </B:supported-calendar-component-set>
+    </A:prop>
+  </A:set>
+</B:mkcalendar>
+, responseTime=7
+

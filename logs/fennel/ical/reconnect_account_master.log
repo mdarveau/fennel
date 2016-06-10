@@ -1,0 +1,747 @@
+
+> fennel@0.2.0-beta start /Users/mdarveau/perso/workspace/fennel
+> node server.js
+
+[2016-06-07 23:33:06.301] [DEBUG] fennelapp - logger loaded
+DEPRECATION WARNING: The logging-option should be either a function or false. Default: console.log
+[2016-06-07 23:33:06.706] [INFO] fennelapp - Server running at http://127.0.0.1:8888/
+[2016-06-07 23:33:06.774] [INFO] fennelapp - Database structure updated
+[2016-06-07 23:33:15.383] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:15.383] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:15.386] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:15.387] [DEBUG] fennelapp - Method: PROPFIND, URL: /
+[2016-06-07 23:33:15.388] [DEBUG] fennelapp - Called the root. Redirecting to /p/
+[2016-06-07 23:33:15.390] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:15.390] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:15.392] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:15.392] [DEBUG] fennelapp - Method: PROPFIND, URL: /p/
+[2016-06-07 23:33:15.393] [DEBUG] fennelapp - principal.propfind called
+[2016-06-07 23:33:33.443] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.443] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.446] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.446] [DEBUG] fennelapp - Method: PROPFIND, URL: /
+[2016-06-07 23:33:33.446] [DEBUG] fennelapp - Called the root. Redirecting to /p/
+[2016-06-07 23:33:33.447] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.448] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.450] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.450] [DEBUG] fennelapp - Method: PROPFIND, URL: /p/
+[2016-06-07 23:33:33.450] [DEBUG] fennelapp - principal.propfind called
+[2016-06-07 23:33:33.662] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.662] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.665] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.665] [DEBUG] fennelapp - Method: PROPFIND, URL: /
+[2016-06-07 23:33:33.665] [DEBUG] fennelapp - Called the root. Redirecting to /p/
+[2016-06-07 23:33:33.666] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.667] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.669] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.670] [DEBUG] fennelapp - Method: PROPFIND, URL: /p/
+[2016-06-07 23:33:33.670] [DEBUG] fennelapp - principal.propfind called
+[2016-06-07 23:33:33.671] [WARN] fennelapp - P-PF: not handled: dropbox-home-URL
+[2016-06-07 23:33:33.671] [WARN] fennelapp - P-PF: not handled: schedule-inbox-URL
+[2016-06-07 23:33:33.674] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.674] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.676] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.676] [DEBUG] fennelapp - Method: OPTIONS, URL: /
+[2016-06-07 23:33:33.677] [DEBUG] fennelapp - Called the root. Redirecting to /p/
+[2016-06-07 23:33:33.678] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.678] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.680] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.680] [DEBUG] fennelapp - Method: OPTIONS, URL: /p/
+[2016-06-07 23:33:33.681] [DEBUG] fennelapp - principal.options called
+[2016-06-07 23:33:33.683] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.683] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.685] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.686] [DEBUG] fennelapp - Method: REPORT, URL: /p/
+[2016-06-07 23:33:33.686] [DEBUG] fennelapp - principal.report called
+[2016-06-07 23:33:33.743] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.743] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.746] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.746] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:33.747] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT count(*) AS "count" FROM "CALs" AS "CAL" WHERE "CAL"."owner" = 'fennel';
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."owner" = 'fennel' ORDER BY "CAL"."order" ASC;
+[2016-06-07 23:33:33.775] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.775] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.775] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.775] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.776] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.777] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.778] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.779] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.779] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.779] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.779] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.780] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.781] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.781] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.781] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.781] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.781] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.782] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.782] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.782] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.782] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.782] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.783] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.783] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.783] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.783] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.783] [WARN] fennelapp - CAL-PF: not handled: calendar-alarm
+[2016-06-07 23:33:33.783] [WARN] fennelapp - CAL-PF: not handled: invite
+[2016-06-07 23:33:33.800] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.800] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.802] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.802] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/
+[2016-06-07 23:33:33.803] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'fennel';
+[2016-06-07 23:33:33.806] [WARN] fennelapp - Calendar not found
+[2016-06-07 23:33:33.806] [INFO] fennelapp - proppatch default-alarm-vevent-date not handled yet
+[2016-06-07 23:33:33.809] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.809] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.823] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.823] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/
+[2016-06-07 23:33:33.824] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'fennel';
+[2016-06-07 23:33:33.826] [WARN] fennelapp - Calendar not found
+[2016-06-07 23:33:33.826] [INFO] fennelapp - proppatch default-alarm-vevent-datetime not handled yet
+[2016-06-07 23:33:33.833] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.834] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.836] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.836] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/84BC1BB2-9C6C-4A55-AE68-A25C4873709F/
+[2016-06-07 23:33:33.837] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '84BC1BB2-9C6C-4A55-AE68-A25C4873709F';
+[2016-06-07 23:33:33.847] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:33.849] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.849] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.852] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.852] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/11B07AD4-DD2E-4CFA-B351-4E26E93C02E9/
+[2016-06-07 23:33:33.852] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '11B07AD4-DD2E-4CFA-B351-4E26E93C02E9';
+[2016-06-07 23:33:33.863] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:33.865] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.865] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.867] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.867] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/675CB5EC-FAF2-4946-AB39-F0843034B02C/
+[2016-06-07 23:33:33.868] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '675CB5EC-FAF2-4946-AB39-F0843034B02C';
+[2016-06-07 23:33:33.876] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:33.879] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.879] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.881] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.881] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/F334F791-964F-4648-A6E6-9AF708FF8AE8/
+[2016-06-07 23:33:33.882] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F334F791-964F-4648-A6E6-9AF708FF8AE8';
+[2016-06-07 23:33:33.895] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:33.898] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.898] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.901] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.901] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/C0365756-B916-4CD3-831E-C8FF1C58FACE/
+[2016-06-07 23:33:33.901] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'C0365756-B916-4CD3-831E-C8FF1C58FACE';
+[2016-06-07 23:33:33.909] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:33.916] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.916] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.920] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.920] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/10F8611B-47B8-446D-9A6D-457DFA1B213A/
+[2016-06-07 23:33:33.920] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '10F8611B-47B8-446D-9A6D-457DFA1B213A';
+[2016-06-07 23:33:33.930] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:33.938] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.938] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.942] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.942] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/7251FAC2-9A64-435A-8181-E970583F7AA5/
+[2016-06-07 23:33:33.942] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '7251FAC2-9A64-435A-8181-E970583F7AA5';
+[2016-06-07 23:33:33.949] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:33.952] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.952] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.956] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.956] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/38AE870F-B52D-4B28-951B-78A5D9345007/
+[2016-06-07 23:33:33.956] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '38AE870F-B52D-4B28-951B-78A5D9345007';
+[2016-06-07 23:33:33.960] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:33.964] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.964] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.968] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.968] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/F81D7998-E8A5-4D75-99C9-20106E1F5890/
+[2016-06-07 23:33:33.969] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F81D7998-E8A5-4D75-99C9-20106E1F5890';
+[2016-06-07 23:33:33.979] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:33.996] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:33.996] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:33.999] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:33.999] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/2FA29141-6FBC-4DBB-AC39-F4021A7F2983/
+[2016-06-07 23:33:34.000] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '2FA29141-6FBC-4DBB-AC39-F4021A7F2983';
+[2016-06-07 23:33:34.007] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:34.024] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.026] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.034] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.035] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/F292D107-C977-4543-9DE6-9A7FBA287C35/
+[2016-06-07 23:33:34.035] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F292D107-C977-4543-9DE6-9A7FBA287C35';
+[2016-06-07 23:33:34.039] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:34.045] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.045] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.049] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.049] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/04155B42-29FA-436C-AB3B-A07FE449A62E/
+[2016-06-07 23:33:34.049] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '04155B42-29FA-436C-AB3B-A07FE449A62E';
+[2016-06-07 23:33:34.061] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:34.085] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.085] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.090] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.090] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/D19FB701-3763-41FF-80AB-D5297C950443/
+[2016-06-07 23:33:34.090] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'D19FB701-3763-41FF-80AB-D5297C950443';
+[2016-06-07 23:33:34.098] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:34.104] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.104] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.109] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.109] [DEBUG] fennelapp - Method: PROPPATCH, URL: /cal/fennel/FF2B0475-E1C1-46E3-A4E8-9CE0475650EA/
+[2016-06-07 23:33:34.109] [DEBUG] fennelapp - calendar.proppatch called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'FF2B0475-E1C1-46E3-A4E8-9CE0475650EA';
+[2016-06-07 23:33:34.115] [WARN] fennelapp - cal saved
+[2016-06-07 23:33:34.577] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.577] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.579] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.580] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/2FA29141-6FBC-4DBB-AC39-F4021A7F2983/
+[2016-06-07 23:33:34.580] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '2FA29141-6FBC-4DBB-AC39-F4021A7F2983';
+[2016-06-07 23:33:34.586] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.586] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.589] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.589] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/2FA29141-6FBC-4DBB-AC39-F4021A7F2983/
+[2016-06-07 23:33:34.589] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '2FA29141-6FBC-4DBB-AC39-F4021A7F2983';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '2FA29141-6FBC-4DBB-AC39-F4021A7F2983';
+Executing (default): SELECT "pkey", "calendarId", "content", "createdAt", "updatedAt" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '2FA29141-6FBC-4DBB-AC39-F4021A7F2983';
+[2016-06-07 23:33:34.603] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.603] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.606] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.606] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/2FA29141-6FBC-4DBB-AC39-F4021A7F2983/
+[2016-06-07 23:33:34.606] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '2FA29141-6FBC-4DBB-AC39-F4021A7F2983';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '2FA29141-6FBC-4DBB-AC39-F4021A7F2983';
+Executing (default): SELECT "pkey", "calendarId", "content", "createdAt", "updatedAt" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '2FA29141-6FBC-4DBB-AC39-F4021A7F2983';
+[2016-06-07 23:33:34.627] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.627] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.632] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.632] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/2FA29141-6FBC-4DBB-AC39-F4021A7F2983/
+[2016-06-07 23:33:34.632] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."pkey" IN ('BBEF19CA-7C9B-4E12-A5D7-51A0D2F707CA', 'E5896201-C1F4-40FD-93BF-FF1A2BA1C842', '854fb9f9-3ce7-e546-9e9a-81375f651a34', '98A0A9D2-AFD3-4186-A601-6B4E8C24BE6E', '1c3c4c52-001a-bb49-ae26-a691223a406d', '132A8EB8-9FF8-49D8-A270-661D265ECA77');
+Executing (default): SELECT "pkey", "calendarId", "content", "createdAt", "updatedAt" FROM "ICs" AS "ICS" WHERE "ICS"."pkey" IN ('BBEF19CA-7C9B-4E12-A5D7-51A0D2F707CA', 'E5896201-C1F4-40FD-93BF-FF1A2BA1C842', '854fb9f9-3ce7-e546-9e9a-81375f651a34', '98A0A9D2-AFD3-4186-A601-6B4E8C24BE6E', '1c3c4c52-001a-bb49-ae26-a691223a406d', '132A8EB8-9FF8-49D8-A270-661D265ECA77');
+[2016-06-07 23:33:34.687] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.687] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.697] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.697] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/38AE870F-B52D-4B28-951B-78A5D9345007/
+[2016-06-07 23:33:34.697] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '38AE870F-B52D-4B28-951B-78A5D9345007';
+[2016-06-07 23:33:34.708] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.708] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.710] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.710] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/38AE870F-B52D-4B28-951B-78A5D9345007/
+[2016-06-07 23:33:34.710] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '38AE870F-B52D-4B28-951B-78A5D9345007';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '38AE870F-B52D-4B28-951B-78A5D9345007';
+[2016-06-07 23:33:34.718] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.718] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.721] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.722] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/38AE870F-B52D-4B28-951B-78A5D9345007/
+[2016-06-07 23:33:34.722] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '38AE870F-B52D-4B28-951B-78A5D9345007';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '38AE870F-B52D-4B28-951B-78A5D9345007';
+[2016-06-07 23:33:34.731] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.731] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.733] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.733] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/FF2B0475-E1C1-46E3-A4E8-9CE0475650EA/
+[2016-06-07 23:33:34.733] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'FF2B0475-E1C1-46E3-A4E8-9CE0475650EA';
+[2016-06-07 23:33:34.746] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.746] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.749] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.749] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/FF2B0475-E1C1-46E3-A4E8-9CE0475650EA/
+[2016-06-07 23:33:34.749] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'FF2B0475-E1C1-46E3-A4E8-9CE0475650EA';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'FF2B0475-E1C1-46E3-A4E8-9CE0475650EA';
+[2016-06-07 23:33:34.759] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.760] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.763] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.763] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/FF2B0475-E1C1-46E3-A4E8-9CE0475650EA/
+[2016-06-07 23:33:34.763] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'FF2B0475-E1C1-46E3-A4E8-9CE0475650EA';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'FF2B0475-E1C1-46E3-A4E8-9CE0475650EA';
+[2016-06-07 23:33:34.778] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.778] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.783] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.783] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/84BC1BB2-9C6C-4A55-AE68-A25C4873709F/
+[2016-06-07 23:33:34.785] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '84BC1BB2-9C6C-4A55-AE68-A25C4873709F';
+[2016-06-07 23:33:34.799] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.799] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.802] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.802] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/84BC1BB2-9C6C-4A55-AE68-A25C4873709F/
+[2016-06-07 23:33:34.802] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '84BC1BB2-9C6C-4A55-AE68-A25C4873709F';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '84BC1BB2-9C6C-4A55-AE68-A25C4873709F';
+[2016-06-07 23:33:34.813] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.813] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.816] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.816] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/84BC1BB2-9C6C-4A55-AE68-A25C4873709F/
+[2016-06-07 23:33:34.816] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '84BC1BB2-9C6C-4A55-AE68-A25C4873709F';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '84BC1BB2-9C6C-4A55-AE68-A25C4873709F';
+[2016-06-07 23:33:34.831] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.831] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.842] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.842] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/F81D7998-E8A5-4D75-99C9-20106E1F5890/
+[2016-06-07 23:33:34.842] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F81D7998-E8A5-4D75-99C9-20106E1F5890';
+[2016-06-07 23:33:34.850] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.850] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.853] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.853] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/F81D7998-E8A5-4D75-99C9-20106E1F5890/
+[2016-06-07 23:33:34.853] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F81D7998-E8A5-4D75-99C9-20106E1F5890';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'F81D7998-E8A5-4D75-99C9-20106E1F5890';
+[2016-06-07 23:33:34.862] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.863] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.865] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.865] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/F81D7998-E8A5-4D75-99C9-20106E1F5890/
+[2016-06-07 23:33:34.866] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F81D7998-E8A5-4D75-99C9-20106E1F5890';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'F81D7998-E8A5-4D75-99C9-20106E1F5890';
+[2016-06-07 23:33:34.877] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.877] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.880] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.880] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/C0365756-B916-4CD3-831E-C8FF1C58FACE/
+[2016-06-07 23:33:34.880] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'C0365756-B916-4CD3-831E-C8FF1C58FACE';
+[2016-06-07 23:33:34.888] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.888] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.891] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.891] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/C0365756-B916-4CD3-831E-C8FF1C58FACE/
+[2016-06-07 23:33:34.892] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'C0365756-B916-4CD3-831E-C8FF1C58FACE';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'C0365756-B916-4CD3-831E-C8FF1C58FACE';
+[2016-06-07 23:33:34.898] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.898] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.899] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.899] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/C0365756-B916-4CD3-831E-C8FF1C58FACE/
+[2016-06-07 23:33:34.899] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'C0365756-B916-4CD3-831E-C8FF1C58FACE';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'C0365756-B916-4CD3-831E-C8FF1C58FACE';
+[2016-06-07 23:33:34.909] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.909] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.911] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.912] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/7251FAC2-9A64-435A-8181-E970583F7AA5/
+[2016-06-07 23:33:34.912] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '7251FAC2-9A64-435A-8181-E970583F7AA5';
+[2016-06-07 23:33:34.917] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.917] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.922] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.923] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/7251FAC2-9A64-435A-8181-E970583F7AA5/
+[2016-06-07 23:33:34.923] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '7251FAC2-9A64-435A-8181-E970583F7AA5';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '7251FAC2-9A64-435A-8181-E970583F7AA5';
+[2016-06-07 23:33:34.931] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.931] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.934] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.934] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/7251FAC2-9A64-435A-8181-E970583F7AA5/
+[2016-06-07 23:33:34.935] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '7251FAC2-9A64-435A-8181-E970583F7AA5';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '7251FAC2-9A64-435A-8181-E970583F7AA5';
+[2016-06-07 23:33:34.947] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.948] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.951] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.951] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/04155B42-29FA-436C-AB3B-A07FE449A62E/
+[2016-06-07 23:33:34.951] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '04155B42-29FA-436C-AB3B-A07FE449A62E';
+[2016-06-07 23:33:34.960] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.961] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.969] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.969] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/04155B42-29FA-436C-AB3B-A07FE449A62E/
+[2016-06-07 23:33:34.969] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '04155B42-29FA-436C-AB3B-A07FE449A62E';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '04155B42-29FA-436C-AB3B-A07FE449A62E';
+[2016-06-07 23:33:34.981] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.981] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.984] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:34.984] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/04155B42-29FA-436C-AB3B-A07FE449A62E/
+[2016-06-07 23:33:34.984] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '04155B42-29FA-436C-AB3B-A07FE449A62E';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '04155B42-29FA-436C-AB3B-A07FE449A62E';
+[2016-06-07 23:33:34.996] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:34.997] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:34.999] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.000] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/10F8611B-47B8-446D-9A6D-457DFA1B213A/
+[2016-06-07 23:33:35.001] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '10F8611B-47B8-446D-9A6D-457DFA1B213A';
+[2016-06-07 23:33:35.022] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.022] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.027] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.027] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/10F8611B-47B8-446D-9A6D-457DFA1B213A/
+[2016-06-07 23:33:35.027] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '10F8611B-47B8-446D-9A6D-457DFA1B213A';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '10F8611B-47B8-446D-9A6D-457DFA1B213A';
+[2016-06-07 23:33:35.038] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.039] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.041] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.041] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/10F8611B-47B8-446D-9A6D-457DFA1B213A/
+[2016-06-07 23:33:35.041] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '10F8611B-47B8-446D-9A6D-457DFA1B213A';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '10F8611B-47B8-446D-9A6D-457DFA1B213A';
+[2016-06-07 23:33:35.054] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.054] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.056] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.056] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/F292D107-C977-4543-9DE6-9A7FBA287C35/
+[2016-06-07 23:33:35.056] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F292D107-C977-4543-9DE6-9A7FBA287C35';
+[2016-06-07 23:33:35.063] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.063] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.066] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.066] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/F292D107-C977-4543-9DE6-9A7FBA287C35/
+[2016-06-07 23:33:35.066] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F292D107-C977-4543-9DE6-9A7FBA287C35';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'F292D107-C977-4543-9DE6-9A7FBA287C35';
+[2016-06-07 23:33:35.082] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.083] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.085] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.085] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/F292D107-C977-4543-9DE6-9A7FBA287C35/
+[2016-06-07 23:33:35.085] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F292D107-C977-4543-9DE6-9A7FBA287C35';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'F292D107-C977-4543-9DE6-9A7FBA287C35';
+[2016-06-07 23:33:35.103] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.103] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.105] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.105] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/F334F791-964F-4648-A6E6-9AF708FF8AE8/
+[2016-06-07 23:33:35.106] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F334F791-964F-4648-A6E6-9AF708FF8AE8';
+[2016-06-07 23:33:35.112] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.112] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.115] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.115] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/F334F791-964F-4648-A6E6-9AF708FF8AE8/
+[2016-06-07 23:33:35.115] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F334F791-964F-4648-A6E6-9AF708FF8AE8';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'F334F791-964F-4648-A6E6-9AF708FF8AE8';
+[2016-06-07 23:33:35.123] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.124] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.126] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.128] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/F334F791-964F-4648-A6E6-9AF708FF8AE8/
+[2016-06-07 23:33:35.128] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F334F791-964F-4648-A6E6-9AF708FF8AE8';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'F334F791-964F-4648-A6E6-9AF708FF8AE8';
+[2016-06-07 23:33:35.150] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.151] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.153] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.153] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/675CB5EC-FAF2-4946-AB39-F0843034B02C/
+[2016-06-07 23:33:35.153] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '675CB5EC-FAF2-4946-AB39-F0843034B02C';
+[2016-06-07 23:33:35.159] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.159] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.161] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.161] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/675CB5EC-FAF2-4946-AB39-F0843034B02C/
+[2016-06-07 23:33:35.161] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '675CB5EC-FAF2-4946-AB39-F0843034B02C';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '675CB5EC-FAF2-4946-AB39-F0843034B02C';
+[2016-06-07 23:33:35.168] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.168] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.170] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.170] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/675CB5EC-FAF2-4946-AB39-F0843034B02C/
+[2016-06-07 23:33:35.170] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '675CB5EC-FAF2-4946-AB39-F0843034B02C';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '675CB5EC-FAF2-4946-AB39-F0843034B02C';
+[2016-06-07 23:33:35.180] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.180] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.186] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.187] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/D19FB701-3763-41FF-80AB-D5297C950443/
+[2016-06-07 23:33:35.187] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'D19FB701-3763-41FF-80AB-D5297C950443';
+[2016-06-07 23:33:35.196] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.196] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.200] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.200] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/D19FB701-3763-41FF-80AB-D5297C950443/
+[2016-06-07 23:33:35.200] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'D19FB701-3763-41FF-80AB-D5297C950443';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'D19FB701-3763-41FF-80AB-D5297C950443';
+[2016-06-07 23:33:35.206] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.206] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.208] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.208] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/D19FB701-3763-41FF-80AB-D5297C950443/
+[2016-06-07 23:33:35.211] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'D19FB701-3763-41FF-80AB-D5297C950443';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = 'D19FB701-3763-41FF-80AB-D5297C950443';
+[2016-06-07 23:33:35.224] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.225] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.226] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.226] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/11B07AD4-DD2E-4CFA-B351-4E26E93C02E9/
+[2016-06-07 23:33:35.226] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '11B07AD4-DD2E-4CFA-B351-4E26E93C02E9';
+[2016-06-07 23:33:35.256] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.256] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.259] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.260] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/11B07AD4-DD2E-4CFA-B351-4E26E93C02E9/
+[2016-06-07 23:33:35.260] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '11B07AD4-DD2E-4CFA-B351-4E26E93C02E9';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '11B07AD4-DD2E-4CFA-B351-4E26E93C02E9';
+[2016-06-07 23:33:35.268] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.268] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.270] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.271] [DEBUG] fennelapp - Method: REPORT, URL: /cal/fennel/11B07AD4-DD2E-4CFA-B351-4E26E93C02E9/
+[2016-06-07 23:33:35.273] [DEBUG] fennelapp - calendar.report called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '11B07AD4-DD2E-4CFA-B351-4E26E93C02E9';
+Executing (default): SELECT count(*) AS "count" FROM "ICs" AS "ICS" WHERE "ICS"."calendarId" = '11B07AD4-DD2E-4CFA-B351-4E26E93C02E9';
+[2016-06-07 23:33:35.284] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.284] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.286] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.286] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.286] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.290] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.290] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.291] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.291] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/2FA29141-6FBC-4DBB-AC39-F4021A7F2983/
+[2016-06-07 23:33:35.292] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '2FA29141-6FBC-4DBB-AC39-F4021A7F2983';
+[2016-06-07 23:33:35.296] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.296] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.297] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.297] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/2FA29141-6FBC-4DBB-AC39-F4021A7F2983/
+[2016-06-07 23:33:35.298] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '2FA29141-6FBC-4DBB-AC39-F4021A7F2983';
+[2016-06-07 23:33:35.366] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.366] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.368] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.368] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.368] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.372] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.372] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.375] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.375] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/38AE870F-B52D-4B28-951B-78A5D9345007/
+[2016-06-07 23:33:35.375] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '38AE870F-B52D-4B28-951B-78A5D9345007';
+[2016-06-07 23:33:35.381] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.382] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.383] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.383] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/38AE870F-B52D-4B28-951B-78A5D9345007/
+[2016-06-07 23:33:35.383] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '38AE870F-B52D-4B28-951B-78A5D9345007';
+[2016-06-07 23:33:35.393] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.393] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.395] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.395] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.395] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.398] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.398] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.400] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.400] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/FF2B0475-E1C1-46E3-A4E8-9CE0475650EA/
+[2016-06-07 23:33:35.400] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'FF2B0475-E1C1-46E3-A4E8-9CE0475650EA';
+[2016-06-07 23:33:35.417] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.417] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.419] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.419] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/FF2B0475-E1C1-46E3-A4E8-9CE0475650EA/
+[2016-06-07 23:33:35.419] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'FF2B0475-E1C1-46E3-A4E8-9CE0475650EA';
+[2016-06-07 23:33:35.430] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.430] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.434] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.434] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.434] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.437] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.437] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.441] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.441] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/84BC1BB2-9C6C-4A55-AE68-A25C4873709F/
+[2016-06-07 23:33:35.441] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '84BC1BB2-9C6C-4A55-AE68-A25C4873709F';
+[2016-06-07 23:33:35.445] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.445] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.449] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.449] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/84BC1BB2-9C6C-4A55-AE68-A25C4873709F/
+[2016-06-07 23:33:35.450] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '84BC1BB2-9C6C-4A55-AE68-A25C4873709F';
+[2016-06-07 23:33:35.467] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.467] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.469] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.469] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.469] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.472] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.472] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.474] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.474] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/F81D7998-E8A5-4D75-99C9-20106E1F5890/
+[2016-06-07 23:33:35.474] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F81D7998-E8A5-4D75-99C9-20106E1F5890';
+[2016-06-07 23:33:35.483] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.483] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.487] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.487] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/F81D7998-E8A5-4D75-99C9-20106E1F5890/
+[2016-06-07 23:33:35.487] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F81D7998-E8A5-4D75-99C9-20106E1F5890';
+[2016-06-07 23:33:35.514] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.514] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.516] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.516] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.516] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.519] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.519] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.521] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.521] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/C0365756-B916-4CD3-831E-C8FF1C58FACE/
+[2016-06-07 23:33:35.522] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'C0365756-B916-4CD3-831E-C8FF1C58FACE';
+[2016-06-07 23:33:35.527] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.527] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.530] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.530] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/C0365756-B916-4CD3-831E-C8FF1C58FACE/
+[2016-06-07 23:33:35.530] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'C0365756-B916-4CD3-831E-C8FF1C58FACE';
+[2016-06-07 23:33:35.542] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.542] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.544] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.544] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.544] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.547] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.547] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.550] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.550] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/7251FAC2-9A64-435A-8181-E970583F7AA5/
+[2016-06-07 23:33:35.550] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '7251FAC2-9A64-435A-8181-E970583F7AA5';
+[2016-06-07 23:33:35.557] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.557] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.559] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.559] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/7251FAC2-9A64-435A-8181-E970583F7AA5/
+[2016-06-07 23:33:35.560] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '7251FAC2-9A64-435A-8181-E970583F7AA5';
+[2016-06-07 23:33:35.570] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.570] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.572] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.573] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.573] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.582] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.582] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.585] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.585] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/04155B42-29FA-436C-AB3B-A07FE449A62E/
+[2016-06-07 23:33:35.585] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '04155B42-29FA-436C-AB3B-A07FE449A62E';
+[2016-06-07 23:33:35.593] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.593] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.595] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.596] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/04155B42-29FA-436C-AB3B-A07FE449A62E/
+[2016-06-07 23:33:35.596] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '04155B42-29FA-436C-AB3B-A07FE449A62E';
+[2016-06-07 23:33:35.610] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.610] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.614] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.615] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.615] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.631] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.631] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.634] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.634] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/10F8611B-47B8-446D-9A6D-457DFA1B213A/
+[2016-06-07 23:33:35.634] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '10F8611B-47B8-446D-9A6D-457DFA1B213A';
+[2016-06-07 23:33:35.640] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.640] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.643] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.643] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/10F8611B-47B8-446D-9A6D-457DFA1B213A/
+[2016-06-07 23:33:35.643] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '10F8611B-47B8-446D-9A6D-457DFA1B213A';
+[2016-06-07 23:33:35.656] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.656] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.658] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.658] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.659] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.663] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.663] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.667] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.667] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/F292D107-C977-4543-9DE6-9A7FBA287C35/
+[2016-06-07 23:33:35.667] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F292D107-C977-4543-9DE6-9A7FBA287C35';
+[2016-06-07 23:33:35.674] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.674] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.677] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.678] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/F292D107-C977-4543-9DE6-9A7FBA287C35/
+[2016-06-07 23:33:35.678] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F292D107-C977-4543-9DE6-9A7FBA287C35';
+[2016-06-07 23:33:35.692] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.692] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.694] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.694] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.694] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.697] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.697] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.699] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.699] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/F334F791-964F-4648-A6E6-9AF708FF8AE8/
+[2016-06-07 23:33:35.699] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F334F791-964F-4648-A6E6-9AF708FF8AE8';
+[2016-06-07 23:33:35.711] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.711] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.713] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.713] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/F334F791-964F-4648-A6E6-9AF708FF8AE8/
+[2016-06-07 23:33:35.713] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'F334F791-964F-4648-A6E6-9AF708FF8AE8';
+[2016-06-07 23:33:35.726] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.726] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.728] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.728] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.728] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.732] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.732] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.737] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.737] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/675CB5EC-FAF2-4946-AB39-F0843034B02C/
+[2016-06-07 23:33:35.738] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '675CB5EC-FAF2-4946-AB39-F0843034B02C';
+[2016-06-07 23:33:35.744] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.745] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.754] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.754] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/675CB5EC-FAF2-4946-AB39-F0843034B02C/
+[2016-06-07 23:33:35.754] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '675CB5EC-FAF2-4946-AB39-F0843034B02C';
+[2016-06-07 23:33:35.768] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.768] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.771] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.771] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.771] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.775] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.775] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.778] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.778] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/D19FB701-3763-41FF-80AB-D5297C950443/
+[2016-06-07 23:33:35.778] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'D19FB701-3763-41FF-80AB-D5297C950443';
+[2016-06-07 23:33:35.789] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.789] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.793] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.793] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/D19FB701-3763-41FF-80AB-D5297C950443/
+[2016-06-07 23:33:35.793] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = 'D19FB701-3763-41FF-80AB-D5297C950443';
+[2016-06-07 23:33:35.817] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.817] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.819] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.819] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/
+[2016-06-07 23:33:35.819] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.824] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.824] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.827] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.827] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/11B07AD4-DD2E-4CFA-B351-4E26E93C02E9/
+[2016-06-07 23:33:35.828] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '11B07AD4-DD2E-4CFA-B351-4E26E93C02E9';
+[2016-06-07 23:33:35.836] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.836] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.839] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.839] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/11B07AD4-DD2E-4CFA-B351-4E26E93C02E9/
+[2016-06-07 23:33:35.839] [DEBUG] fennelapp - calendar.propfind called
+Executing (default): SELECT "pkey", "owner", "timezone", "order", "free_busy_set", "supported_cal_component", "colour", "displayname", "synctoken", "createdAt", "updatedAt" FROM "CALs" AS "CAL" WHERE "CAL"."pkey" = '11B07AD4-DD2E-4CFA-B351-4E26E93C02E9';
+[2016-06-07 23:33:35.914] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.914] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.919] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.920] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/notifications/
+[2016-06-07 23:33:35.920] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.925] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.925] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.928] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.928] [DEBUG] fennelapp - Method: PROPFIND, URL: /cal/fennel/notifications/
+[2016-06-07 23:33:35.928] [DEBUG] fennelapp - calendar.propfind called
+[2016-06-07 23:33:35.972] [DEBUG] fennelapp - Login process started for user: fennel
+[2016-06-07 23:33:35.972] [DEBUG] fennelapp - Authenticating user with htaccess method.
+[2016-06-07 23:33:35.976] [INFO] fennelapp - User logged in: fennel
+[2016-06-07 23:33:35.976] [DEBUG] fennelapp - Method: REPORT, URL: /p/fennel/
+[2016-06-07 23:33:35.977] [DEBUG] fennelapp - principal.report called
+

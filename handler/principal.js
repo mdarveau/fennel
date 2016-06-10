@@ -29,10 +29,6 @@ function propfind(request)
     rh.setStandardHeaders(request);
     rh.setDAVHeaders(request);
 
-    var res = request.getRes();
-    res.writeHead(207);
-    res.write(xh.getXMLHead());
-
     var xmlDoc = request.getXml();
 
     var node = xmlDoc.get('/A:propfind/A:prop', {
@@ -44,7 +40,11 @@ function propfind(request)
     });
     var childs = node.childNodes();
 
-    var response = "";
+    var response = xh.getXMLHead();
+    response += "<d:multistatus xmlns:d=\"DAV:\" xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:card=\"urn:ietf:params:xml:ns:carddav\">";
+    response += "<d:response>";
+    response += "<d:propstat>";
+    response += "<d:prop>";
     
     var len = childs.length;
     for (var i=0; i < len; ++i)
@@ -115,16 +115,16 @@ function propfind(request)
                 response += "";
                 break;
 
-            // FIXME @mdarveau It this usefull?
-            case 'resourcetype':
-                response += "<d:resourcetype><d:collection/><cal:calendar/></d:resourcetype>";
-                break;
-              
-            // FIXME @mdarveau It this usefull?
-            case 'owner':
-                var username = request.getUser().getUserName();
-                response += "<d:owner><d:href>/p/" + username +"/</d:href></d:owner>";
-                break;
+            // // FIXME @mdarveau It this usefull?
+            // case 'resourcetype':
+            //     response += "<d:resourcetype><d:collection/><cal:calendar/></d:resourcetype>";
+            //     break;
+            //  
+            // // FIXME @mdarveau It this usefull?
+            // case 'owner':
+            //     var username = request.getUser().getUserName();
+            //     response += "<d:owner><d:href>/p/" + username +"/</d:href></d:owner>";
+            //     break;
             
             default:
                 if(name != 'text') log.warn("P-PF: not handled: " + name);
@@ -132,16 +132,14 @@ function propfind(request)
         }
     }
 
-    res.write("<d:multistatus xmlns:d=\"DAV:\" xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:card=\"urn:ietf:params:xml:ns:carddav\">");
-    res.write("<d:response>");
-    res.write("<d:propstat>");
-    res.write("<d:prop>");
-    res.write(response);
-    res.write("</d:prop>");
-    res.write("<d:status>HTTP/1.1 200 OK</d:status>");
-    res.write("</d:propstat>");
-    res.write("</d:response>");
-    res.write("</d:multistatus>");
+    
+    response += "</d:prop>";
+    response += "<d:status>HTTP/1.1 200 OK</d:status>";
+    response += "</d:propstat>";
+    response += "</d:response>";
+    response += "</d:multistatus>";
+    
+    request.getRes().status(207).send(response);
 }
 
 function getCalendarUserAddressSet(request)
@@ -185,13 +183,13 @@ function options(request)
     log.debug("principal.options called");
 
     var res = request.getRes();
-    res.setHeader("Content-Type", "text/html");
-    res.setHeader("Server", "Fennel");
+    res.set("Content-Type", "text/html");
+    res.set("Server", "Fennel");
     
     rh.setDAVHeaders(request);
     rh.setAllowHeader(request);
 
-    res.writeHead(200);
+    res.sendStatus(200);
 }
 
 function report(request)
@@ -199,10 +197,6 @@ function report(request)
     log.debug("principal.report called");
 
     rh.setStandardHeaders(request);
-
-    var res = request.getRes();
-    res.writeHead(200);
-    res.write(xh.getXMLHead());
 
     var xmlDoc = request.getXml();
 
@@ -214,7 +208,8 @@ function report(request)
         E: "http://me.com/_namespace/"
     });
 
-    var response = "";
+    // FIXME @mdarveau It looks like there is no XML root node here...
+    var response = xh.getXMLHead();
 
     if(node != undefined)
     {
@@ -261,13 +256,13 @@ function report(request)
         }
     }
 
-    // TODO: clean up
-    res.write(response);
-
     if(isReportPropertyCalendarProxyWriteFor(request))
     {
-        replyPropertyCalendarProxyWriteFor(request);
+        response += getReplyPropertyCalendarProxyWriteFor(request);
     }
+    
+    // TODO: clean up
+    request.getRes().send(response);
 }
 
 
@@ -302,22 +297,24 @@ function isReportPropertyCalendarProxyWriteFor(request)
     return typeof node != 'undefined';
 }
 
-function replyPropertyCalendarProxyWriteFor(request)
+function getReplyPropertyCalendarProxyWriteFor(request)
 {
     var url = request.getURL();
-    var res = request.getRes();
-    res.write("<d:multistatus xmlns:d=\"DAV:\" xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:card=\"urn:ietf:params:xml:ns:carddav\">\r\n");
-    res.write("<d:response>");
-    res.write("    <d:href>" + url + "</d:href>");
-    res.write("    <d:propstat>");
-    res.write("       <d:prop>");
-    res.write("           <cs:calendar-proxy-read-for/>");
-    res.write("           <cs:calendar-proxy-write-for/>");
-    res.write("       </d:prop>");
-    res.write("        <d:status>HTTP/1.1 200 OK</d:status>");
-    res.write("    </d:propstat>");
-    res.write("</d:response>");
-    res.write("</d:multistatus>\r\n");
+    var response = "";
+    response += "<d:multistatus xmlns:d=\"DAV:\" xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:card=\"urn:ietf:params:xml:ns:carddav\">\r\n";
+    response += "<d:response>";
+    response += "    <d:href>" + url + "</d:href>";
+    response += "    <d:propstat>";
+    response += "       <d:prop>";
+    response += "           <cs:calendar-proxy-read-for/>";
+    response += "           <cs:calendar-proxy-write-for/>";
+    response += "       </d:prop>";
+    response += "        <d:status>HTTP/1.1 200 OK</d:status>";
+    response += "    </d:propstat>";
+    response += "</d:response>";
+    response += "</d:multistatus>\r\n";
+    
+    return response;
 }
 
 function proppatch(request)
@@ -327,20 +324,20 @@ function proppatch(request)
     rh.setStandardHeaders(request);
 
     var url = request.getURL();
-    var res = request.getRes();
-    res.writeHead(200);
 
-    res.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
-    res.write("<d:multistatus xmlns:d=\"DAV:\" xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:card=\"urn:ietf:params:xml:ns:carddav\">\r\n");
-    res.write("	<d:response>\r\n");
-    res.write("		<d:href>" + url + "</d:href>\r\n");
-    res.write("		<d:propstat>\r\n");
-    res.write("			<d:prop>\r\n");
-    res.write("				<cal:default-alarm-vevent-date/>\r\n");
-    res.write("			</d:prop>\r\n");
-    res.write("			<d:status>HTTP/1.1 403 Forbidden</d:status>\r\n");
-    res.write("		</d:propstat>\r\n");
-    res.write("	</d:response>\r\n");
-    res.write("</d:multistatus>\r\n");
+    response += "<?xml version=\"1.0\" encoding=\"utf-8\"?>";
+    response += "<d:multistatus xmlns:d=\"DAV:\" xmlns:cal=\"urn:ietf:params:xml:ns:caldav\" xmlns:cs=\"http://calendarserver.org/ns/\" xmlns:card=\"urn:ietf:params:xml:ns:carddav\">\r\n";
+    response += "	<d:response>\r\n";
+    response += "		<d:href>" + url + "</d:href>\r\n";
+    response += "		<d:propstat>\r\n";
+    response += "			<d:prop>\r\n";
+    response += "				<cal:default-alarm-vevent-date/>\r\n";
+    response += "			</d:prop>\r\n";
+    response += "			<d:status>HTTP/1.1 403 Forbidden</d:status>\r\n";
+    response += "		</d:propstat>\r\n";
+    response += "	</d:response>\r\n";
+    response += "</d:multistatus>\r\n";
+
+    request.getRes().send(response);
 }
 

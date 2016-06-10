@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<multistatus xmlns="DAV:" xmlns:C="urn:ietf:params:xml:ns:caldav" xmlns:CS="http://calendarserver.org/ns/" xmlns:ICAL="http://apple.com/ns/ical/" xmlns:ME="http://me.com/_namespace/">
+	<response>
+		<href>/</href>
+		<propstat>
+			<prop>
+				<ICAL:calendar-color>#5d3354</ICAL:calendar-color>
+				<ICAL:calendar-order>1</ICAL:calendar-order>
+				<C:calendar-timezone>BEGIN:VCALENDAR
+					VERSION:2.0
+					PRODID:-//Apple Inc.//Mac OS X 10.11.5//EN
+					CALSCALE:GREGORIAN
+					BEGIN:VTIMEZONE
+					TZID:America/Montreal
+					BEGIN:DAYLIGHT
+					TZOFFSETFROM:-0500
+					RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+					DTSTART:20070311T020000
+					TZNAME:GMT-4
+					TZOFFSETTO:-0400
+					X-RADICALE-NAME:America/Montreal
+					END:DAYLIGHT
+					BEGIN:STANDARD
+					TZOFFSETFROM:-0400
+					RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+					DTSTART:20071104T020000
+					TZNAME:GMT-5
+					TZOFFSETTO:-0500
+					X-RADICALE-NAME:America/Montreal
+					END:STANDARD
+					X-RADICALE-NAME:America/Montreal
+					END:VTIMEZONE
+					END:VCALENDAR
+				</C:calendar-timezone>
+				<current-user-privilege-set>
+					<privilege>
+						<all />
+						<read />
+						<write />
+						<write-properties />
+						<write-content />
+					</privilege>
+				</current-user-privilege-set>
+				<C:default-alarm-vevent-date>BEGIN:VALARM
+					X-WR-ALARMUID:F10999CC-D2FE-484B-933D-72C1A2C56A26
+					UID:F10999CC-D2FE-484B-933D-72C1A2C56A26
+					TRIGGER:-PT15H
+					ATTACH;VALUE=URI:Basso
+					ACTION:AUDIO
+					END:VALARM
+				</C:default-alarm-vevent-date>
+				<C:default-alarm-vevent-datetime>BEGIN:VALARM
+					X-WR-ALARMUID:8E7457E0-3BD2-4661-821F-41EEA6588F29
+					UID:8E7457E0-3BD2-4661-821F-41EEA6588F29
+					TRIGGER:-PT5M
+					ATTACH;VALUE=URI:Basso
+					ACTION:AUDIO
+					END:VALARM
+				</C:default-alarm-vevent-datetime>
+				<displayname>test_calendar</displayname>
+				<CS:getctag>"eaf3276621340d3a832cdeba38a28599"</CS:getctag>
+				<resourcetype>
+					<principal />
+					<C:calendar />
+					<collection />
+				</resourcetype>
+				<C:supported-calendar-component-set>
+					<C:comp name="VTODO" />
+					<C:comp name="VEVENT" />
+					<C:comp name="VJOURNAL" />
+				</C:supported-calendar-component-set>
+				<supported-report-set>
+					<supported-report>
+						<report>principal-property-search</report>
+					</supported-report>
+					<supported-report>
+						<report>sync-collection</report>
+					</supported-report>
+					<supported-report>
+						<report>expand-property</report>
+					</supported-report>
+					<supported-report>
+						<report>principal-search-property-set</report>
+					</supported-report>
+				</supported-report-set>
+			</prop>
+			<status>HTTP/1.1 200 OK</status>
+		</propstat>
+		<propstat>
+			<prop>
+				<add-member />
+				<CS:allowed-sharing-modes />
+				<ICAL:autoprovisioned />
+				<ME:bulk-requests />
+				<C:calendar-alarm />
+				<C:calendar-description />
+				<C:calendar-free-busy-set />
+				<CS:invite />
+				<ICAL:language-code />
+				<ICAL:location-code />
+				<owner />
+				<CS:pre-publish-url />
+				<CS:publish-url />
+				<CS:push-transports />
+				<CS:pushkey />
+				<quota-available-bytes />
+				<quota-used-bytes />
+				<ICAL:refreshrate />
+				<resource-id />
+				<C:schedule-calendar-transp />
+				<C:schedule-default-calendar-URL />
+				<CS:source />
+				<CS:subscribed-strip-alarms />
+				<CS:subscribed-strip-attachments />
+				<CS:subscribed-strip-todos />
+				<C:supported-calendar-component-sets />
+				<sync-token />
+			</prop>
+			<status>HTTP/1.1 404 Not Found</status>
+		</propstat>
+	</response>
+	<response>
+		<href>/8E7457E0-3BD2-4661-821F-41EEA6588F29</href>
+		<propstat>
+			<prop>
+				<current-user-privilege-set>
+					<privilege>
+						<all />
+						<read />
+						<write />
+						<write-properties />
+						<write-content />
+					</privilege>
+				</current-user-privilege-set>
+				<resourcetype />
+				<C:supported-calendar-component-set>
+					<C:comp name="VTODO" />
+					<C:comp name="VEVENT" />
+					<C:comp name="VJOURNAL" />
+				</C:supported-calendar-component-set>
+				<supported-report-set>
+					<supported-report>
+						<report>principal-property-search</report>
+					</supported-report>
+					<supported-report>
+						<report>sync-collection</report>
+					</supported-report>
+					<supported-report>
+						<report>expand-property</report>
+					</supported-report>
+					<supported-report>
+						<report>principal-search-property-set</report>
+					</supported-report>
+				</supported-report-set>
+			</prop>
+			<status>HTTP/1.1 200 OK</status>
+		</propstat>
+		<propstat>
+			<prop>
+				<add-member />
+				<CS:allowed-sharing-modes />
+				<ICAL:autoprovisioned />
+				<ME:bulk-requests />
+				<C:calendar-alarm />
+				<ICAL:calendar-color />
+				<C:calendar-description />
+				<C:calendar-free-busy-set />
+				<ICAL:calendar-order />
+				<C:calendar-timezone />
+				<C:default-alarm-vevent-date />
+				<C:default-alarm-vevent-datetime />
+				<displayname />
+				<CS:getctag />
+				<CS:invite />
+				<ICAL:language-code />
+				<ICAL:location-code />
+				<owner />
+				<CS:pre-publish-url />
+				<CS:publish-url />
+				<CS:push-transports />
+				<CS:pushkey />
+				<quota-available-bytes />
+				<quota-used-bytes />
+				<ICAL:refreshrate />
+				<resource-id />
+				<C:schedule-calendar-transp />
+				<C:schedule-default-calendar-URL />
+				<CS:source />
+				<CS:subscribed-strip-alarms />
+				<CS:subscribed-strip-attachments />
+				<CS:subscribed-strip-todos />
+				<C:supported-calendar-component-sets />
+				<sync-token />
+			</prop>
+			<status>HTTP/1.1 404 Not Found</status>
+		</propstat>
+	</response>
+</multistatus>
